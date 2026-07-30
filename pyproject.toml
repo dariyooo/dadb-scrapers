@@ -1,0 +1,47 @@
+[project]
+name = "dadb-scrapers"
+version = "0.1.0"
+description = "Scrapers and parsers producing DaDb example-sentence source dumps"
+requires-python = ">=3.12"
+dependencies = [
+    "requests>=2.31",
+    "zstandard>=0.22",
+    "beautifulsoup4>=4.12",
+    "PyYAML>=6.0",
+    "pydantic>=2.7",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "pyright>=1.1.390",
+    "ruff>=0.8",
+    "types-requests",
+    "types-PyYAML",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["core", "sources", "sources.syosetu"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM", "RUF"]
+# Fullwidth ｜ is the syosetu/aozora ruby marker — its use next to ASCII | in
+# the parser regexes is deliberate, not a typo.
+allowed-confusables = ["｜"]
+
+[tool.pyright]
+pythonVersion = "3.12"
+venvPath = "."
+venv = ".venv"
+include = ["core", "sources", "tests"]
