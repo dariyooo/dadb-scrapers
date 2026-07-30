@@ -1,0 +1,6 @@
+site: syosetu
+rate_limit_seconds: 3.0
+api:
+  endpoint: https://api.syosetu.com/novelapi/api/
+  order: hyoka # total points, descending
+  max_works: 2000 # API pagination ceiling (lim=500, st<=2000)
