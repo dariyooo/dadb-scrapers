@@ -1,0 +1,100 @@
+name: crawl
+
+on:
+  workflow_dispatch:
+    inputs:
+      max_pages:
+        description: "Page limit (0 = unlimited); use a small number for smoke tests"
+        default: "0"
+      max_seconds:
+        description: "Crawl time budget in seconds"
+        default: "19200"
+  # cron disabled until a private batch destination exists — raw dumps must
+  # not be published (public repo => public releases/artifacts)
+  # schedule:
+  #   - cron: "17 */6 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  crawl:
+    strategy:
+      fail-fast: false
+      matrix:
+        site: [syosetu]
+    # never two overlapping runs of one site
+    concurrency:
+      group: crawl-${{ matrix.site }}
+      cancel-in-progress: false
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Install
+        run: uv sync --locked --no-dev
+
+      - name: Crawl
+        run: |
+          uv run python -m sources.${{ matrix.site }}.acquire \
+            --out out \
+            --max-seconds "${{ inputs.max_seconds || 19200 }}" \
+            --max-pages "${{ inputs.max_pages || 0 }}"
+
+      - name: Commit cursor
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sources/${{ matrix.site }}/state
+          if git diff --cached --quiet; then
+            echo "no state change"
+          else
+            git commit -m "crawl(${{ matrix.site }}): advance cursor [skip ci]"
+            git pull --rebase origin main
+            git push origin main
+          fi
+
+      # Text is an on-runner handoff only: parsed .txt is never uploaded.
+      - name: Parse
+        run: |
+          shopt -s nullglob
+          batches=(out/${{ matrix.site }}/*.jsonl.zst)
+          if [ ${#batches[@]} -eq 0 ]; then
+            echo "no batches produced"
+            exit 0
+          fi
+          uv run python -m sources.${{ matrix.site }}.parse "${batches[@]}" \
+            --out out/text/${{ matrix.site }}
+
+      - uses: dart-lang/setup-dart@v1
+        with:
+          sdk: stable
+
+      - name: Build bank zips
+        run: |
+          if [ ! -d out/text/${{ matrix.site }} ]; then
+            echo "nothing to build"
+            exit 0
+          fi
+          cd builder
+          dart pub get
+          dart run bin/build_bank.dart ../out/text/${{ matrix.site }} \
+            ../out/banks/${{ matrix.site }} --site=${{ matrix.site }}
+
+      # Interim destination until step 8 (bucketed releases + manifests).
+      - name: Upload bank zips
+        uses: actions/upload-artifact@v4
+        with:
+          name: banks-${{ matrix.site }}-${{ github.run_id }}
+          path: out/banks/${{ matrix.site }}/*.zip
+          if-no-files-found: ignore
+          retention-days: 30
+
+      # TODO: upload raw dump batch to a private destination (R2 or
+      # private-repo release). Until then batches die with the runner, so
+      # only dispatch this workflow with a small max_pages for smoke tests.
