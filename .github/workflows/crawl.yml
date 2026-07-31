@@ -105,6 +105,21 @@ jobs:
         with:
           sdk: stable
 
+      # language_processing lives in the private dalang repo; GITHUB_TOKEN
+      # cannot read other repos, so pub clones through a fine-grained PAT
+      # (secret DALANG_READ_TOKEN, Contents: read on dariyooo/dalang).
+      - name: Authorize private package repo
+        env:
+          DALANG_TOKEN: ${{ secrets.DALANG_READ_TOKEN }}
+        run: |
+          if [ -z "$DALANG_TOKEN" ]; then
+            echo "::error::secret DALANG_READ_TOKEN is not set; cannot fetch language_processing"
+            exit 1
+          fi
+          git config --global \
+            url."https://x-access-token:${DALANG_TOKEN}@github.com/dariyooo/dalang".insteadOf \
+            "https://github.com/dariyooo/dalang"
+
       - name: Build bank zips
         run: |
           if [ ! -d out/text/${{ matrix.site }} ]; then
