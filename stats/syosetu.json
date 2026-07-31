@@ -1,0 +1,20 @@
+{
+ "totals": {
+  "bytes": 261287,
+  "sentences": 4611,
+  "works": 1
+ },
+ "updated": "2026-07-30T01:47:50+00:00",
+ "works": {
+  "n6682gf": {
+   "bytes": 261287,
+   "chapters": 46,
+   "id": "n6682gf",
+   "revision": "0.1.0+lp.e07011c9247f",
+   "sentences": 4611,
+   "title": "悪役令嬢の中の人【書籍化・コミカライズ】",
+   "updated": "2026-07-30T01:47:50+00:00",
+   "url": "https://ncode.syosetu.com/n6682gf/"
+  }
+ }
+}

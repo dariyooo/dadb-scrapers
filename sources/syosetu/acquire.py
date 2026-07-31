@@ -1,16 +1,20 @@
 """Syosetu crawler — stage 1: raw HTML dump.
 
-Discovers works via the official API (no selectors to go stale) and enumerates
-chapter URLs from its chapter counts. Resumable across CI runs via committed
-state/ (works.json + cursor.json); --max-seconds stops cleanly before the job cap.
+Discovers works via the official API and enumerates chapter URLs from its
+chapter counts. Crawling runs in shards (worker i takes works where
+index % shards == i) as endless passes: crawl the full list, idle for
+pass_interval_days, re-discover, repeat. --coordinate decides the phase and
+owns discovery; state/ is committed between CI runs.
 """
 
 from __future__ import annotations
 
 import argparse
 import logging
+import os
 import sys
 import time
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 from typing import Any
 
@@ -35,8 +39,14 @@ class Work(BaseModel):
 
 
 class Cursor(BaseModel):
-    work_index: int = 0
+    work_index: int
     chapter: int = 1
+
+
+class PassState(BaseModel):
+    started: str
+    completed: str | None = None
+    heartbeat: str | None = None
 
 
 WORK_LIST = TypeAdapter(list[Work])
@@ -79,15 +89,73 @@ def chapter_url(work: Work, chapter: int) -> str:
     return base if work.short else f"{base}{chapter}/"
 
 
+def cursor_path(state: Path, shard: int) -> Path:
+    return state / f"cursor-{shard}.json"
+
+
+def _now_iso(now: datetime) -> str:
+    return now.isoformat(timespec="seconds")
+
+
+def start_new_pass(state: Path, works: list[Work], num_shards: int, now: datetime) -> None:
+    (state / "works.json").write_bytes(WORK_LIST.dump_json(works, indent=1))
+    for shard in range(num_shards):
+        cursor_path(state, shard).write_text(Cursor(work_index=shard).model_dump_json())
+    (state / "pass.json").write_text(PassState(started=_now_iso(now)).model_dump_json())
+    (state / "cursor.json").unlink(missing_ok=True)  # pre-shard layout
+    log.info("new pass started: %d works, %d shards", len(works), num_shards)
+
+
+def shard_complete(state: Path, shard: int, works_len: int) -> bool:
+    path = cursor_path(state, shard)
+    if not path.exists():
+        return False
+    return Cursor.model_validate_json(path.read_text()).work_index >= works_len
+
+
+def coordinate(state: Path, cfg: dict[str, Any], discover_works, now: datetime) -> str:
+    """Advance the pass lifecycle; returns 'crawl' or 'idle'."""
+    num_shards = cfg["shards"]
+    pass_path = state / "pass.json"
+    if not pass_path.exists():
+        start_new_pass(state, discover_works(), num_shards, now)
+        return "crawl"
+
+    p = PassState.model_validate_json(pass_path.read_text())
+    works_len = len(WORK_LIST.validate_json((state / "works.json").read_bytes()))
+    if not all(shard_complete(state, s, works_len) for s in range(num_shards)):
+        return "crawl"
+
+    if p.completed is None:
+        p.completed = p.heartbeat = _now_iso(now)
+        pass_path.write_text(p.model_dump_json())
+        log.info("pass completed")
+        return "idle"
+
+    if now - datetime.fromisoformat(p.completed) >= timedelta(days=cfg["pass_interval_days"]):
+        start_new_pass(state, discover_works(), num_shards, now)
+        return "crawl"
+
+    # Idle: refresh the heartbeat periodically so the committed state change
+    # keeps GitHub from auto-disabling the cron after 60 days of inactivity.
+    last_beat = datetime.fromisoformat(p.heartbeat or p.completed)
+    if now - last_beat >= timedelta(days=cfg["heartbeat_days"]):
+        p.heartbeat = _now_iso(now)
+        pass_path.write_text(p.model_dump_json())
+        log.info("heartbeat")
+    return "idle"
+
+
 def crawl(
     fetcher: Fetcher,
     works: list[Work],
     cursor: Cursor,
+    num_shards: int,
     writer: BatchWriter,
     deadline: float,
     max_pages: int,
 ) -> Cursor:
-    """Fetch chapters from the cursor until deadline/limit/done; returns the cursor."""
+    """Fetch this shard's chapters from the cursor until deadline/limit/done."""
     pages = 0
     while cursor.work_index < len(works):
         work = works[cursor.work_index]
@@ -105,59 +173,61 @@ def crawl(
             except NotFound:
                 log.warning("gone, skipping rest of work: %s", url)
                 break
-            writer.write(make_doc(url, f"{work.title} #{cursor.chapter}", resp.text))
+            writer.write(make_doc("syosetu", url, f"{work.title} #{cursor.chapter}", resp.text))
             pages += 1
             cursor.chapter += 1
-        cursor.work_index += 1
+        cursor.work_index += num_shards
         cursor.chapter = 1
-    log.info("work list exhausted")
+    log.info("shard slice exhausted")
     return cursor
 
 
 def main() -> int:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(name)s %(message)s")
     ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--coordinate", action="store_true", help="advance pass lifecycle")
+    ap.add_argument("--shard", type=int, default=0)
     ap.add_argument("--out", default="out", help="batch output directory")
-    ap.add_argument("--state", default=str(HERE / "state"), help="cursor/works dir")
+    ap.add_argument("--state", default=str(HERE / "state"), help="state dir")
     ap.add_argument("--max-seconds", type=float, default=19200)
     ap.add_argument("--max-pages", type=int, default=0, help="0 = unlimited")
-    ap.add_argument("--rediscover", action="store_true", help="refresh works.json")
     args = ap.parse_args()
 
     cfg = load_config()
     fetcher = Fetcher(min_interval=cfg["rate_limit_seconds"])
     state = Path(args.state)
     state.mkdir(parents=True, exist_ok=True)
-    works_path = state / "works.json"
-    cursor_path = state / "cursor.json"
 
-    if args.rediscover or not works_path.exists():
-        log.info("discovering works via API")
-        works = discover(fetcher, cfg)
-        works_path.write_bytes(WORK_LIST.dump_json(works, indent=1))
-        cursor_path.write_text(Cursor().model_dump_json())
-        log.info("discovered %d works", len(works))
+    if args.coordinate:
+        phase = coordinate(state, cfg, lambda: discover(fetcher, cfg), datetime.now(UTC))
+        print(f"phase={phase}")
+        if out_path := os.environ.get("GITHUB_OUTPUT"):
+            with open(out_path, "a") as fh:
+                fh.write(f"phase={phase}\n")
+        return 0
 
-    works = WORK_LIST.validate_json(works_path.read_bytes())
-    cursor = Cursor.model_validate_json(cursor_path.read_text())
+    works = WORK_LIST.validate_json((state / "works.json").read_bytes())
+    cpath = cursor_path(state, args.shard)
+    cursor = Cursor.model_validate_json(cpath.read_text())
     if cursor.work_index >= len(works):
-        log.info("crawl already complete (%d works)", len(works))
+        log.info("shard %d already complete", args.shard)
         return 0
 
     deadline = time.monotonic() + args.max_seconds
     blocked = False
     with BatchWriter(args.out, cfg["site"]) as writer:
         try:
-            cursor = crawl(fetcher, works, cursor, writer, deadline, args.max_pages)
+            cursor = crawl(fetcher, works, cursor, cfg["shards"], writer, deadline, args.max_pages)
         except Blocked as e:
             log.error("site is refusing us, aborting run: %s", e)
             blocked = True
         finally:
-            cursor_path.write_text(cursor.model_dump_json())
+            cpath.write_text(cursor.model_dump_json())
             log.info(
-                "wrote %d docs to %s; cursor at work %d/%d",
+                "wrote %d docs to %s; shard %d cursor at %d/%d",
                 writer.count,
                 writer.path,
+                args.shard,
                 cursor.work_index,
                 len(works),
             )

@@ -1,5 +1,10 @@
 site: syosetu
 rate_limit_seconds: 3.0
+# per-shard interval stays polite; never raise shards without lowering load
+shards: 3
+pass_interval_days: 55 # < GitHub's 60-day cron auto-disable window
+heartbeat_days: 14
+
 api:
   endpoint: https://api.syosetu.com/novelapi/api/
   order: hyoka # total points, descending

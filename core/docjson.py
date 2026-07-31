@@ -14,7 +14,8 @@ from pydantic import BaseModel
 
 
 class Doc(BaseModel):
-    type: str = "text/html"
+    format: str = "html"  # picks the parser
+    source: str  # picks the config
     lang: str = "ja"
     url: str
     title: str
@@ -23,8 +24,9 @@ class Doc(BaseModel):
     text: str
 
 
-def make_doc(url: str, title: str, html: str, published: str | None = None) -> Doc:
+def make_doc(source: str, url: str, title: str, html: str, published: str | None = None) -> Doc:
     return Doc(
+        source=source,
         url=url,
         title=title,
         created=datetime.now(UTC).isoformat(timespec="seconds"),

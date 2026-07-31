@@ -98,6 +98,8 @@ def parse_batches(batch_paths: list[Path], out_dir: Path) -> dict[str, int]:
     errors = 0
     for path in batch_paths:
         for doc in read_batch(path):
+            if doc.format != "html":
+                raise ParseError(f"cannot parse format {doc.format!r}: {doc.url}")
             m = URL_RE.search(doc.url)
             if not m:
                 raise ParseError(f"unrecognized URL: {doc.url}")

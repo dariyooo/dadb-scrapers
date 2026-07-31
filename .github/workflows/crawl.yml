@@ -4,31 +4,28 @@ on:
   workflow_dispatch:
     inputs:
       max_pages:
-        description: "Page limit (0 = unlimited); use a small number for smoke tests"
+        description: "Per-shard page limit (0 = unlimited); use a small number for smoke tests"
         default: "0"
       max_seconds:
-        description: "Crawl time budget in seconds"
+        description: "Per-shard crawl time budget in seconds"
         default: "19200"
-  # cron disabled until a private batch destination exists — raw dumps must
-  # not be published (public repo => public releases/artifacts)
-  # schedule:
-  #   - cron: "17 */6 * * *"
+  schedule:
+    # Continuous during a pass, no-op while idle. Pass cadence and the
+    # anti-auto-disable heartbeat live in config.yaml / coordinate.
+    - cron: "17 */6 * * *"
 
 permissions:
   contents: write
 
 jobs:
-  crawl:
-    strategy:
-      fail-fast: false
-      matrix:
-        site: [syosetu]
-    # never two overlapping runs of one site
-    concurrency:
-      group: crawl-${{ matrix.site }}
-      cancel-in-progress: false
+  coordinate:
     runs-on: ubuntu-latest
-    timeout-minutes: 340
+    timeout-minutes: 15
+    concurrency:
+      group: crawl-coordinate
+      cancel-in-progress: false
+    outputs:
+      phase: ${{ steps.phase.outputs.phase }}
     steps:
       - uses: actions/checkout@v4
 
@@ -39,27 +36,60 @@ jobs:
       - name: Install
         run: uv sync --locked --no-dev
 
-      - name: Crawl
-        run: |
-          uv run python -m sources.${{ matrix.site }}.acquire \
-            --out out \
-            --max-seconds "${{ inputs.max_seconds || 19200 }}" \
-            --max-pages "${{ inputs.max_pages || 0 }}"
+      - name: Decide phase
+        id: phase
+        run: uv run python -m sources.syosetu.acquire --coordinate
 
-      - name: Commit cursor
+      - name: Commit state
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add sources/${{ matrix.site }}/state
+          git add sources/syosetu/state
           if git diff --cached --quiet; then
             echo "no state change"
           else
-            git commit -m "crawl(${{ matrix.site }}): advance cursor [skip ci]"
+            git commit -m "crawl(syosetu): pass state [skip ci]"
             git pull --rebase origin main
             git push origin main
           fi
 
-      # Text is an on-runner handoff only: parsed .txt is never uploaded.
+  crawl:
+    needs: coordinate
+    if: needs.coordinate.outputs.phase == 'crawl'
+    strategy:
+      fail-fast: false
+      matrix:
+        site: [syosetu]
+        shard: [0, 1, 2]
+    # never two overlapping runs of one shard
+    concurrency:
+      group: crawl-${{ matrix.site }}-${{ matrix.shard }}
+      cancel-in-progress: false
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Sync to latest state
+        run: git pull --rebase origin main
+
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Install
+        run: uv sync --locked --no-dev
+
+      - name: Crawl shard
+        run: |
+          uv run python -m sources.${{ matrix.site }}.acquire \
+            --shard ${{ matrix.shard }} \
+            --out out \
+            --max-seconds "${{ inputs.max_seconds || 19200 }}" \
+            --max-pages "${{ inputs.max_pages || 0 }}"
+
+      # Text is an on-runner handoff only: raw dumps and parsed .txt are
+      # never uploaded; they die with the runner.
       - name: Parse
         run: |
           shopt -s nullglob
@@ -86,15 +116,87 @@ jobs:
           dart run bin/build_bank.dart ../out/text/${{ matrix.site }} \
             ../out/banks/${{ matrix.site }} --site=${{ matrix.site }}
 
-      # Interim destination until step 8 (bucketed releases + manifests).
+      # Each shard only writes its own cursor-N.json, so a rebase against
+      # the other shards' commits is always clean.
+      - name: Commit shard state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sources/${{ matrix.site }}/state
+          if git diff --cached --quiet; then
+            echo "no state change"
+            exit 0
+          fi
+          git commit -m "crawl(${{ matrix.site }}): shard ${{ matrix.shard }} state [skip ci]"
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase origin main && git push origin main && exit 0
+            sleep $((RANDOM % 20 + 5))
+          done
+          exit 1
+
+      # Interim destination until step-8 upload automation lands.
       - name: Upload bank zips
         uses: actions/upload-artifact@v4
         with:
-          name: banks-${{ matrix.site }}-${{ github.run_id }}
+          name: banks-${{ matrix.site }}-shard${{ matrix.shard }}-${{ github.run_id }}
           path: out/banks/${{ matrix.site }}/*.zip
           if-no-files-found: ignore
           retention-days: 30
 
-      # TODO: upload raw dump batch to a private destination (R2 or
-      # private-repo release). Until then batches die with the runner, so
-      # only dispatch this workflow with a small max_pages for smoke tests.
+      - name: Hand off build stats
+        uses: actions/upload-artifact@v4
+        with:
+          name: buildstats-${{ matrix.site }}-shard${{ matrix.shard }}-${{ github.run_id }}
+          path: out/banks/${{ matrix.site }}/build_summary.json
+          if-no-files-found: ignore
+          retention-days: 7
+
+  # One committed stats update per workflow run, aggregated over all shards.
+  summarize:
+    needs: [coordinate, crawl]
+    if: ${{ !cancelled() && needs.coordinate.outputs.phase == 'crawl' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Sync to latest state
+        run: git pull --rebase origin main
+
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Install
+        run: uv sync --locked --no-dev
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: buildstats-*-${{ github.run_id }}
+          path: buildstats
+
+      - name: Merge stats
+        run: |
+          shopt -s nullglob
+          files=(buildstats/*/build_summary.json)
+          if [ ${#files[@]} -eq 0 ]; then
+            echo "no build stats this run"
+            exit 0
+          fi
+          uv run python -m core.summary --stats stats --site syosetu "${files[@]}"
+
+      - name: Commit stats
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add stats
+          if git diff --cached --quiet; then
+            echo "no stats change"
+            exit 0
+          fi
+          git commit -m "crawl(syosetu): update stats [skip ci]"
+          for attempt in 1 2 3; do
+            git pull --rebase origin main && git push origin main && exit 0
+            sleep $((RANDOM % 20 + 5))
+          done
+          exit 1
