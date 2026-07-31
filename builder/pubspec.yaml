@@ -1,0 +1,16 @@
+name: builder
+description: Text -> DaDb example bank builder
+publish_to: none
+environment:
+  sdk: ^3.6.0
+
+dependencies:
+  archive: ^4.0.9
+  language_processing:
+    git:
+      url: https://github.com/dariyooo/dalang.git
+      path: dart_packages/language_processing
+      ref: refactor-v4
+
+dev_dependencies:
+  test: ^1.25.0
