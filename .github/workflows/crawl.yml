@@ -6,6 +6,9 @@ on:
       max_pages:
         description: "Per-shard page limit (0 = unlimited); use a small number for smoke tests"
         default: "0"
+      max_works:
+        description: "Complete works per shard (0 = unlimited); minimal end-to-end runs"
+        default: "0"
       max_seconds:
         description: "Per-shard crawl time budget in seconds"
         default: "19200"
@@ -80,27 +83,6 @@ jobs:
       - name: Install
         run: uv sync --locked --no-dev
 
-      - name: Crawl shard
-        run: |
-          uv run python -m sources.${{ matrix.site }}.acquire \
-            --shard ${{ matrix.shard }} \
-            --out out \
-            --max-seconds "${{ inputs.max_seconds || 19200 }}" \
-            --max-pages "${{ inputs.max_pages || 0 }}"
-
-      # Text is an on-runner handoff only: raw dumps and parsed .txt are
-      # never uploaded; they die with the runner.
-      - name: Parse
-        run: |
-          shopt -s nullglob
-          batches=(out/${{ matrix.site }}/*.jsonl.zst)
-          if [ ${#batches[@]} -eq 0 ]; then
-            echo "no batches produced"
-            exit 0
-          fi
-          uv run python -m sources.${{ matrix.site }}.parse "${batches[@]}" \
-            --out out/text/${{ matrix.site }}
-
       - uses: dart-lang/setup-dart@v1
         with:
           sdk: stable
@@ -120,6 +102,33 @@ jobs:
             url."https://x-access-token:${DALANG_TOKEN}@github.com/dariyooo/dalang".insteadOf \
             "https://github.com/dariyooo/dalang"
 
+      # Validate the whole toolchain BEFORE spending hours crawling: a
+      # misconfigured builder must fail in a minute, not after the crawl.
+      - name: Validate builder toolchain
+        run: cd builder && dart pub get
+
+      - name: Crawl shard
+        run: |
+          uv run python -m sources.${{ matrix.site }}.acquire \
+            --shard ${{ matrix.shard }} \
+            --out out \
+            --max-seconds "${{ inputs.max_seconds || 19200 }}" \
+            --max-pages "${{ inputs.max_pages || 0 }}" \
+            --max-works "${{ inputs.max_works || 0 }}"
+
+      # Text is an on-runner handoff only: raw dumps and parsed .txt are
+      # never uploaded; they die with the runner.
+      - name: Parse
+        run: |
+          shopt -s nullglob
+          batches=(out/${{ matrix.site }}/*.jsonl.zst)
+          if [ ${#batches[@]} -eq 0 ]; then
+            echo "no batches produced"
+            exit 0
+          fi
+          uv run python -m sources.${{ matrix.site }}.parse "${batches[@]}" \
+            --out out/text/${{ matrix.site }}
+
       - name: Build bank zips
         run: |
           if [ ! -d out/text/${{ matrix.site }} ]; then
@@ -127,7 +136,6 @@ jobs:
             exit 0
           fi
           cd builder
-          dart pub get
           dart run bin/build_bank.dart ../out/text/${{ matrix.site }} \
             ../out/banks/${{ matrix.site }} --site=${{ matrix.site }}
 

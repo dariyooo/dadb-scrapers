@@ -154,10 +154,15 @@ def crawl(
     writer: BatchWriter,
     deadline: float,
     max_pages: int,
+    max_works: int = 0,
 ) -> Cursor:
     """Fetch this shard's chapters from the cursor until deadline/limit/done."""
     pages = 0
+    works_done = 0
     while cursor.work_index < len(works):
+        if max_works and works_done >= max_works:
+            log.info("work limit reached")
+            return cursor
         work = works[cursor.work_index]
         total = 1 if work.short else work.chapters
         while cursor.chapter <= total:
@@ -178,6 +183,7 @@ def crawl(
             cursor.chapter += 1
         cursor.work_index += num_shards
         cursor.chapter = 1
+        works_done += 1
     log.info("shard slice exhausted")
     return cursor
 
@@ -191,6 +197,9 @@ def main() -> int:
     ap.add_argument("--state", default=str(HERE / "state"), help="state dir")
     ap.add_argument("--max-seconds", type=float, default=19200)
     ap.add_argument("--max-pages", type=int, default=0, help="0 = unlimited")
+    ap.add_argument(
+        "--max-works", type=int, default=0, help="complete works per run, 0 = unlimited"
+    )
     args = ap.parse_args()
 
     cfg = load_config()
@@ -217,7 +226,16 @@ def main() -> int:
     blocked = False
     with BatchWriter(args.out, cfg["site"]) as writer:
         try:
-            cursor = crawl(fetcher, works, cursor, cfg["shards"], writer, deadline, args.max_pages)
+            cursor = crawl(
+                fetcher,
+                works,
+                cursor,
+                cfg["shards"],
+                writer,
+                deadline,
+                args.max_pages,
+                args.max_works,
+            )
         except Blocked as e:
             log.error("site is refusing us, aborting run: %s", e)
             blocked = True
