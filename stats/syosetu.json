@@ -1,11 +1,31 @@
 {
  "totals": {
-  "bytes": 261287,
-  "sentences": 4611,
-  "works": 1
+  "bytes": 10773882,
+  "sentences": 323291,
+  "works": 7
  },
- "updated": "2026-07-30T01:47:50+00:00",
+ "updated": "2026-08-01T03:51:07+00:00",
  "works": {
+  "n2710db": {
+   "bytes": 1644045,
+   "chapters": 662,
+   "id": "n2710db",
+   "revision": "0.1.0+lp.e07011c9247f",
+   "sentences": 44729,
+   "title": "とんでもスキルで異世界放浪メシ",
+   "updated": "2026-08-01T03:51:07+00:00",
+   "url": "https://ncode.syosetu.com/n2710db/"
+  },
+  "n6316bn": {
+   "bytes": 2119703,
+   "chapters": 304,
+   "id": "n6316bn",
+   "revision": "0.1.0+lp.e07011c9247f",
+   "sentences": 62457,
+   "title": "転生したらスライムだった件",
+   "updated": "2026-08-01T03:51:07+00:00",
+   "url": "https://ncode.syosetu.com/n6316bn/"
+  },
   "n6682gf": {
    "bytes": 261287,
    "chapters": 46,
@@ -15,6 +35,46 @@
    "title": "悪役令嬢の中の人【書籍化・コミカライズ】",
    "updated": "2026-07-30T01:47:50+00:00",
    "url": "https://ncode.syosetu.com/n6682gf/"
+  },
+  "n7787eq": {
+   "bytes": 1869323,
+   "chapters": 539,
+   "id": "n7787eq",
+   "revision": "0.1.0+lp.e07011c9247f",
+   "sentences": 50058,
+   "title": "魔導具師ダリヤはうつむかない",
+   "updated": "2026-08-01T03:51:07+00:00",
+   "url": "https://ncode.syosetu.com/n7787eq/"
+  },
+  "n8733gf": {
+   "bytes": 822151,
+   "chapters": 403,
+   "id": "n8733gf",
+   "revision": "0.1.0+lp.e07011c9247f",
+   "sentences": 22365,
+   "title": "お気楽領主の楽しい領地防衛  〜生産系魔術で名もなき村を最強の城塞都市に〜",
+   "updated": "2026-08-01T03:51:07+00:00",
+   "url": "https://ncode.syosetu.com/n8733gf/"
+  },
+  "n9636x": {
+   "bytes": 1299366,
+   "chapters": 395,
+   "id": "n9636x",
+   "revision": "0.1.0+lp.e07011c9247f",
+   "sentences": 40692,
+   "title": "薬屋のひとりごと",
+   "updated": "2026-08-01T03:51:07+00:00",
+   "url": "https://ncode.syosetu.com/n9636x/"
+  },
+  "n9669bk": {
+   "bytes": 2758007,
+   "chapters": 286,
+   "id": "n9669bk",
+   "revision": "0.1.0+lp.e07011c9247f",
+   "sentences": 98379,
+   "title": "無職転生　- 異世界行ったら本気だす -",
+   "updated": "2026-08-01T03:51:07+00:00",
+   "url": "https://ncode.syosetu.com/n9669bk/"
   }
  }
 }
