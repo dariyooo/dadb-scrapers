@@ -8,6 +8,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:builder/bank_builder.dart';
+import 'package:crypto/crypto.dart';
 import 'package:language_processing/language_processing.dart';
 
 void main(List<String> args) {
@@ -42,13 +43,15 @@ void main(List<String> args) {
       outDir: outDir,
       languageProcessingRef: lpRef,
     );
+    final zipBytes = File('${outDir.path}/corpus-$site-$workId.zip').readAsBytesSync();
     summary.add({
       'id': workId,
       'title': meta['title'] ?? workId,
       'url': meta['url'] ?? '',
       'chapters': meta['chapters'] ?? 0,
       'sentences': count,
-      'bytes': File('${outDir.path}/corpus-$site-$workId.zip').lengthSync(),
+      'bytes': zipBytes.length,
+      'sha256': sha256.convert(zipBytes).toString(),
       'revision': '$builderVersion+lp.${lpRef ?? 'local'}',
     });
     stdout.writeln('corpus-$site-$workId.zip: $count sentences');

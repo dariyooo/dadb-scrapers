@@ -126,6 +126,63 @@ class TestShardCrawl:
         assert (cursor.work_index, cursor.chapter) == (3, 2)
 
 
+def test_pass_label(tmp_path):
+    from core.summary import pass_label
+
+    pass_file = tmp_path / "pass.json"
+    pass_file.write_text(json.dumps({"started": "2026-08-01T02:00:00+00:00"}))
+    assert pass_label(pass_file) == "2026-08"
+
+
+def test_chunk_tag_and_manifest():
+    from core.publish import chunk_tag
+
+    assert chunk_tag("2026-08", 0) == "2026-08.1"
+    assert chunk_tag("2026-08", 499) == "2026-08.1"
+    assert chunk_tag("2026-08", 500) == "2026-08.2"
+    assert chunk_tag("2026-08", 1999) == "2026-08.4"
+
+
+def test_build_manifest(tmp_path):
+    from core.publish import build_manifest
+
+    works_path = tmp_path / "works.json"
+    works_path.write_text(
+        json.dumps(
+            [
+                {"ncode": f"n{i}", "title": f"t{i}", "writer": "w", "chapters": 1, "short": False}
+                for i in range(600)
+            ]
+        )
+    )
+    stats = {
+        "works": {
+            "n0": {
+                "title": "t0",
+                "chapters": 1,
+                "sentences": 5,
+                "bytes": 9,
+                "sha256": "aa",
+                "revision": "r",
+            },
+            "n599": {
+                "title": "t599",
+                "chapters": 1,
+                "sentences": 3,
+                "bytes": 4,
+                "sha256": "bb",
+                "revision": "r",
+            },
+        }
+    }
+    m = build_manifest(stats, works_path, "2026-08", "o/r", "syosetu")
+    assert m["pass"] == "2026-08"
+    urls = {e["ncode"]: e["url"] for e in m["works"]}
+    assert "2026-08.1" in urls["n0"]
+    assert "2026-08.2" in urls["n599"]
+    assert m["works"][0]["writer"] == "w"
+
+
 def test_stats_merge_accumulates_across_runs(tmp_path):
     from core.summary import merge
 
@@ -145,7 +202,7 @@ def test_stats_merge_accumulates_across_runs(tmp_path):
             [{"id": "n3", "title": "三", "url": "u", "chapters": 1, "sentences": 6, "bytes": 3}]
         )
     )
-    result = merge(stats, "syosetu", [build_a, build_b])
+    result = merge(stats, "syosetu", "2026-08", [build_a, build_b])
     assert result == {"merged": 3, "works": 3, "sentences": 20, "bytes": 10}
 
     # next run updates one work and adds another
@@ -158,7 +215,7 @@ def test_stats_merge_accumulates_across_runs(tmp_path):
             ]
         )
     )
-    result = merge(stats, "syosetu", [build_c])
+    result = merge(stats, "syosetu", "2026-08", [build_c])
     assert result == {"merged": 2, "works": 4, "sentences": 23, "bytes": 12}
-    summary = json.loads((stats / "syosetu.json").read_text())
+    summary = json.loads((stats / "syosetu-2026-08.json").read_text())
     assert summary["works"]["n1"]["sentences"] == 12

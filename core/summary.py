@@ -1,7 +1,6 @@
-"""Committed crawl stats: one stats/{site}.json updated once per workflow run.
-
-The summarize job (after all shards) merges the shards' build_summary.json
-files into the existing stats file and commits it.
+"""Committed crawl stats: one stats/{site}-{pass}.json per pass, never overwritten
+across passes. The summarize job merges the shards' build_summary.json files
+into the current pass's file once per workflow run.
 """
 
 from __future__ import annotations
@@ -13,8 +12,14 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 
-def merge(stats_dir: Path, site: str, build_files: list[Path]) -> dict:
-    path = stats_dir / f"{site}.json"
+def pass_label(pass_file: Path) -> str:
+    """YYYY-MM of the current pass's start."""
+    started = json.loads(pass_file.read_text())["started"]
+    return datetime.fromisoformat(started).strftime("%Y-%m")
+
+
+def merge(stats_dir: Path, site: str, label: str, build_files: list[Path]) -> dict:
+    path = stats_dir / f"{site}-{label}.json"
     works: dict = json.loads(path.read_text())["works"] if path.exists() else {}
     now = datetime.now(UTC).isoformat(timespec="seconds")
     merged = 0
@@ -24,6 +29,7 @@ def merge(stats_dir: Path, site: str, build_files: list[Path]) -> dict:
             works[entry["id"]] = entry
             merged += 1
     summary = {
+        "pass": label,
         "updated": now,
         "totals": {
             "works": len(works),
@@ -41,9 +47,11 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--stats", required=True, help="stats directory")
     ap.add_argument("--site", required=True)
+    ap.add_argument("--pass-file", required=True, help="state pass.json for the pass label")
     ap.add_argument("build_files", nargs="+", help="build_summary.json files")
     args = ap.parse_args()
-    result = merge(Path(args.stats), args.site, [Path(p) for p in args.build_files])
+    label = pass_label(Path(args.pass_file))
+    result = merge(Path(args.stats), args.site, label, [Path(p) for p in args.build_files])
     print(result)
     return 0
 

@@ -6,6 +6,7 @@ environment:
 
 dependencies:
   archive: ^4.0.9
+  crypto: ^3.0.7
   language_processing:
     git:
       url: https://github.com/dariyooo/dalang.git

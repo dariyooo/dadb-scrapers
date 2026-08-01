@@ -29,6 +29,7 @@ jobs:
       cancel-in-progress: false
     outputs:
       phase: ${{ steps.phase.outputs.phase }}
+      pass_completed: ${{ steps.phase.outputs.pass_completed }}
     steps:
       - uses: actions/checkout@v4
 
@@ -42,6 +43,25 @@ jobs:
       - name: Decide phase
         id: phase
         run: uv run python -m sources.syosetu.acquire --coordinate
+
+      # The pass just finished: all zips are up, publish its manifest.
+      # {pass}.M is a regular release, so releases/latest/download/ points
+      # at the newest pass; zip chunk releases are prereleases.
+      - name: Publish pass manifest
+        if: steps.phase.outputs.pass_completed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.DADB_PUBLISH_TOKEN }}
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::warning::DADB_PUBLISH_TOKEN not set; pass manifest NOT published"
+            exit 0
+          fi
+          label=$(uv run python -c "from pathlib import Path; from core.summary import pass_label; print(pass_label(Path('sources/syosetu/state/pass.json')))")
+          uv run python -m core.publish \
+            --repo dariyooo/syosetsu-dadb --site syosetu \
+            --works sources/syosetu/state/works.json \
+            --pass-file sources/syosetu/state/pass.json \
+            --manifest-from "stats/syosetu-$label.json"
 
       - name: Commit state
         run: |
@@ -206,7 +226,33 @@ jobs:
             echo "no build stats this run"
             exit 0
           fi
-          uv run python -m core.summary --stats stats --site syosetu "${files[@]}"
+          uv run python -m core.summary --stats stats --site syosetu \
+            --pass-file sources/syosetu/state/pass.json "${files[@]}"
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: banks-*-${{ github.run_id }}
+          path: banks
+
+      - name: Publish bank zips to pass releases
+        env:
+          GH_TOKEN: ${{ secrets.DADB_PUBLISH_TOKEN }}
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::warning::DADB_PUBLISH_TOKEN not set; zips NOT published"
+            exit 0
+          fi
+          shopt -s nullglob
+          zips=(banks/*/*.zip)
+          if [ ${#zips[@]} -eq 0 ]; then
+            echo "no zips this run"
+            exit 0
+          fi
+          uv run python -m core.publish \
+            --repo dariyooo/syosetsu-dadb --site syosetu \
+            --works sources/syosetu/state/works.json \
+            --pass-file sources/syosetu/state/pass.json \
+            --zips "${zips[@]}"
 
       - name: Commit stats
         run: |

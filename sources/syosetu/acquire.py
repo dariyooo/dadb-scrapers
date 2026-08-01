@@ -208,11 +208,21 @@ def main() -> int:
     state.mkdir(parents=True, exist_ok=True)
 
     if args.coordinate:
+        pass_path = state / "pass.json"
+
+        def completed() -> str | None:
+            if not pass_path.exists():
+                return None
+            return PassState.model_validate_json(pass_path.read_text()).completed
+
+        before = completed()
         phase = coordinate(state, cfg, lambda: discover(fetcher, cfg), datetime.now(UTC))
-        print(f"phase={phase}")
+        just_completed = before is None and completed() is not None
+        outputs = f"phase={phase}\npass_completed={str(just_completed).lower()}\n"
+        print(outputs, end="")
         if out_path := os.environ.get("GITHUB_OUTPUT"):
             with open(out_path, "a") as fh:
-                fh.write(f"phase={phase}\n")
+                fh.write(outputs)
         return 0
 
     works = WORK_LIST.validate_json((state / "works.json").read_bytes())
