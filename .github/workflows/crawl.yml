@@ -50,10 +50,10 @@ jobs:
       - name: Publish pass manifest
         if: steps.phase.outputs.pass_completed == 'true'
         env:
-          GH_TOKEN: ${{ secrets.DADB_PUBLISH_TOKEN }}
+          GH_TOKEN: ${{ secrets.SYOSETSU_DADB_PUBLISH_TOKEN }}
         run: |
           if [ -z "$GH_TOKEN" ]; then
-            echo "::warning::DADB_PUBLISH_TOKEN not set; pass manifest NOT published"
+            echo "::warning::SYOSETSU_DADB_PUBLISH_TOKEN not set; pass manifest NOT published"
             exit 0
           fi
           label=$(uv run python -c "from pathlib import Path; from core.summary import pass_label; print(pass_label(Path('sources/syosetu/state/pass.json')))")
@@ -236,10 +236,10 @@ jobs:
 
       - name: Publish bank zips to pass releases
         env:
-          GH_TOKEN: ${{ secrets.DADB_PUBLISH_TOKEN }}
+          GH_TOKEN: ${{ secrets.SYOSETSU_DADB_PUBLISH_TOKEN }}
         run: |
           if [ -z "$GH_TOKEN" ]; then
-            echo "::warning::DADB_PUBLISH_TOKEN not set; zips NOT published"
+            echo "::warning::SYOSETSU_DADB_PUBLISH_TOKEN not set; zips NOT published"
             exit 0
           fi
           shopt -s nullglob
