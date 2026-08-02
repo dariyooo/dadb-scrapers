@@ -1,11 +1,11 @@
 {
  "pass": "2026-07",
  "totals": {
-  "bytes": 210252622,
-  "sentences": 5344236,
+  "bytes": 213464024,
+  "sentences": 5430153,
   "works": 162
  },
- "updated": "2026-08-02T08:37:26+00:00",
+ "updated": "2026-08-02T09:08:37+00:00",
  "works": {
   "n0074em": {
    "bytes": 747061,
@@ -30,14 +30,14 @@
    "url": "https://ncode.syosetu.com/n0174gy/"
   },
   "n0223eu": {
-   "bytes": 66484,
-   "chapters": 52,
+   "bytes": 1430825,
+   "chapters": 620,
    "id": "n0223eu",
    "revision": "0.1.0+lp.e07011c9247f",
-   "sentences": 2724,
-   "sha256": "b7305c76931d5b7421619f5bbbb2c22abbd029882fe206e0e18bd51ae85695c5",
+   "sentences": 55723,
+   "sha256": "b561277ef07399a013be4b16f06d62f9b8bc6b2cf1aded11ef96a18a21fdc9e3",
    "title": "異世界に落とされた…",
-   "updated": "2026-08-02T08:37:26+00:00",
+   "updated": "2026-08-02T09:08:37+00:00",
    "url": "https://ncode.syosetu.com/n0223eu/"
   },
   "n0264hi": {
@@ -722,14 +722,14 @@
    "url": "https://ncode.syosetu.com/n4185ci/"
   },
   "n4214gk": {
-   "bytes": 451725,
-   "chapters": 244,
+   "bytes": 408702,
+   "chapters": 210,
    "id": "n4214gk",
    "revision": "0.1.0+lp.e07011c9247f",
-   "sentences": 12383,
-   "sha256": "db501c26f4352493ba85552788494b46a42c0420d31ab4aac4610eee107f20ef",
+   "sentences": 10813,
+   "sha256": "1322b6b3476858e61ba363575e3cfd27e22e33c013430d9c08c045255b15fd99",
    "title": "エロゲ転生　運命に抗う金豚貴族の奮闘記",
-   "updated": "2026-08-02T08:37:26+00:00",
+   "updated": "2026-08-02T09:08:37+00:00",
    "url": "https://ncode.syosetu.com/n4214gk/"
   },
   "n4218cw": {
@@ -843,14 +843,14 @@
    "url": "https://ncode.syosetu.com/n4774dz/"
   },
   "n4811fg": {
-   "bytes": 47451,
-   "chapters": 8,
+   "bytes": 1937535,
+   "chapters": 295,
    "id": "n4811fg",
    "revision": "0.1.0+lp.e07011c9247f",
-   "sentences": 882,
-   "sha256": "d208bc2cdf7116ec17dc370fb9e69c0495143fc1100332c6841a0f94fabd0107",
+   "sentences": 35370,
+   "sha256": "e5b321a3dcc7ce28cc09790363e1430df7a7e285eaa541217874e8cec2fc9ec6",
    "title": "【コミカライズ連載開始】ＴＲＰＧプレイヤーが異世界で最強ビルドを目指す 　～ヘンダーソン氏の福音を～【書籍11巻下　2026年7月20日発売】",
-   "updated": "2026-08-02T08:37:26+00:00",
+   "updated": "2026-08-02T09:08:37+00:00",
    "url": "https://ncode.syosetu.com/n4811fg/"
   },
   "n4836fm": {
