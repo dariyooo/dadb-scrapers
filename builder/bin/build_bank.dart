@@ -33,7 +33,8 @@ void main(List<String> args) {
         ? jsonDecode(metaFile.readAsStringSync()) as Map<String, dynamic>
         : <String, dynamic>{};
 
-    final sentences = extractSentences(file.readAsStringSync(), processor);
+    final sentences = processor.extractExampleSentences(
+        file.readAsStringSync(), const ProcessorOptions());
     final count = buildBankZip(
       site: site,
       workId: workId,
@@ -43,7 +44,8 @@ void main(List<String> args) {
       outDir: outDir,
       languageProcessingRef: lpRef,
     );
-    final zipBytes = File('${outDir.path}/corpus-$site-$workId.zip').readAsBytesSync();
+    final zipBytes =
+        File('${outDir.path}/corpus-$site-$workId.zip').readAsBytesSync();
     summary.add({
       'id': workId,
       'title': meta['title'] ?? workId,

@@ -204,11 +204,9 @@ packages:
   language_processing:
     dependency: "direct main"
     description:
-      path: "dart_packages/language_processing"
-      ref: refactor-v4
-      resolved-ref: e07011c9247f94eb2584bce1382d23358f16098f
-      url: "https://github.com/dariyooo/dalang.git"
-    source: git
+      path: "/Users/darioklepoch/dev/DaKanji/DaKanjiApplication_4/dart_packages/language_processing"
+      relative: false
+    source: path
     version: "1.0.0"
   logging:
     dependency: transitive

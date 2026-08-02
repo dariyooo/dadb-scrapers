@@ -4,3 +4,4 @@ __pycache__/
 out/
 .pytest_cache/
 .dart_tool/
+pubspec_overrides.yaml

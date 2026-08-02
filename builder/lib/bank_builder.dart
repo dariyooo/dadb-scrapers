@@ -1,38 +1,17 @@
 /// Builds DaDb Example Bank zips from clean per-work text.
 ///
-/// Pipeline per work: split (per paragraph) -> repair -> filter -> dedup ->
-/// order -> corpus-{site}-{id}.zip (index.json + tag_bank_1.json +
-/// example_bank_N.json). File order is import order, so ordering here is the
-/// sentence rank; the scorer will replace text order when it lands.
+/// Pipeline per work: extractExampleSentences -> corpus-{site}-{id}.zip
+/// (index.json + tag_bank_1.json + example_bank_N.json). File order is
+/// import order.
 library;
 
 import 'dart:convert';
 import 'dart:io';
 
 import 'package:archive/archive_io.dart';
-import 'package:builder/sentence_filter.dart';
-import 'package:builder/sentence_repair.dart';
-import 'package:language_processing/language_processing.dart';
 
 const String builderVersion = '0.1.0';
 const int sentencesPerBankFile = 2000;
-
-/// Accepted sentences of one work, in text order, deduplicated.
-List<String> extractSentences(String text, JapaneseProcessor processor) {
-  const options = ProcessorOptions();
-  final seen = <String>{};
-  final out = <String>[];
-  for (final line in const LineSplitter().convert(text)) {
-    if (line.trim().isEmpty) continue;
-    for (final seg in processor.findSentences(line, options)) {
-      final sentence = repairSentence(seg.text);
-      if (sentence.isEmpty) continue;
-      if (rejectionReason(sentence) != null) continue;
-      if (seen.add(sentence)) out.add(sentence);
-    }
-  }
-  return out;
-}
 
 /// corpus-{site}-{workId}.zip in [outDir]. Returns sentence count.
 int buildBankZip({

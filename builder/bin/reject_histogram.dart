@@ -8,8 +8,6 @@ library;
 import 'dart:io';
 import 'dart:math';
 
-import 'package:builder/sentence_filter.dart';
-import 'package:builder/sentence_repair.dart';
 import 'package:language_processing/language_processing.dart';
 
 void main(List<String> args) {
@@ -42,10 +40,10 @@ void main(List<String> args) {
     for (final line in file.readAsLinesSync()) {
       if (line.trim().isEmpty) continue;
       for (final seg in processor.findSentences(line, options)) {
-        final sentence = repairSentence(seg.text);
+        final sentence = processor.repairSentence(seg.text, options);
         if (sentence.isEmpty) continue;
         total++;
-        var reason = rejectionReason(sentence);
+        var reason = processor.sentenceRejectionReason(sentence, options);
         if (reason == null && !seen.add(sentence)) reason = 'duplicate';
         if (reason == null) acceptedSink?.writeln(sentence);
         final key = reason ?? 'ACCEPT';

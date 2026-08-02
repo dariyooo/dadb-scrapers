@@ -3,23 +3,9 @@ import 'dart:io';
 
 import 'package:archive/archive_io.dart';
 import 'package:builder/bank_builder.dart';
-import 'package:language_processing/language_processing.dart';
 import 'package:test/test.dart';
 
 void main() {
-  final processor = JapaneseProcessor();
-
-  test('extractSentences splits, filters, dedups in text order', () {
-    const text = '今日は天気がいいから散歩に行こう。空がとても青いのだ。\n'
-        '「これは会話だから入らない」\n'
-        '今日は天気がいいから散歩に行こう。\n';
-    final sentences = extractSentences(text, processor);
-    expect(sentences, [
-      '今日は天気がいいから散歩に行こう。',
-      '空がとても青いのだ。',
-    ]);
-  });
-
   test('buildBankZip emits importable structure with chunking', () {
     final tmp = Directory.systemTemp.createTempSync('bank_test');
     addTearDown(() => tmp.deleteSync(recursive: true));
