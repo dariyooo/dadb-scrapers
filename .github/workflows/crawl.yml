@@ -10,8 +10,8 @@ on:
         description: "Complete works per shard (0 = unlimited); minimal end-to-end runs"
         default: "0"
       max_seconds:
-        description: "Per-shard crawl time budget in seconds"
-        default: "19200"
+        description: "Per-shard crawl time budget in seconds (280min; leaves 60min for parse/build in the 340min job cap)"
+        default: "16800"
   schedule:
     # Continuous during a pass, no-op while idle. Pass cadence and the
     # anti-auto-disable heartbeat live in config.yaml / coordinate.
@@ -132,7 +132,7 @@ jobs:
           uv run python -m sources.${{ matrix.site }}.acquire \
             --shard ${{ matrix.shard }} \
             --out out \
-            --max-seconds "${{ inputs.max_seconds || 19200 }}" \
+            --max-seconds "${{ inputs.max_seconds || 16800 }}" \
             --max-pages "${{ inputs.max_pages || 0 }}" \
             --max-works "${{ inputs.max_works || 0 }}"
 
