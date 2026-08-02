@@ -1,11 +1,11 @@
 {
  "pass": "2026-07",
  "totals": {
-  "bytes": 171969454,
-  "sentences": 4425831,
-  "works": 123
+  "bytes": 173457552,
+  "sentences": 4458357,
+  "works": 124
  },
- "updated": "2026-08-02T01:47:51+00:00",
+ "updated": "2026-08-02T02:24:54+00:00",
  "works": {
   "n0174gy": {
    "bytes": 255503,
@@ -655,6 +655,17 @@
    "updated": "2026-08-01T14:39:15+00:00",
    "url": "https://ncode.syosetu.com/n5040ce/"
   },
+  "n5091gj": {
+   "bytes": 231501,
+   "chapters": 113,
+   "id": "n5091gj",
+   "revision": "0.1.0+lp.e07011c9247f",
+   "sentences": 5907,
+   "sha256": "698a6d9560eb626c375cdec284b380cdce9d27e2737d133506e92214ea357f85",
+   "title": "【WEB版】完璧すぎて可愛げがないと婚約破棄された聖女は隣国に売られる【アニメ化！漫画8巻5/8発売！】",
+   "updated": "2026-08-02T02:24:54+00:00",
+   "url": "https://ncode.syosetu.com/n5091gj/"
+  },
   "n5182ih": {
    "bytes": 174014,
    "chapters": 73,
@@ -678,14 +689,14 @@
    "url": "https://ncode.syosetu.com/n5490cq/"
   },
   "n5529cy": {
-   "bytes": 285005,
-   "chapters": 57,
+   "bytes": 1541602,
+   "chapters": 460,
    "id": "n5529cy",
    "revision": "0.1.0+lp.e07011c9247f",
-   "sentences": 7833,
-   "sha256": "37fdee183581a8639cf9740d94d5089683836c2ae135c3ef307358f520f49870",
+   "sentences": 34452,
+   "sha256": "d097887a3f97fb72f51d40e04b46a89155d6f8370f688cb3177cb676423801e1",
    "title": "老後に備えて異世界で８万枚の金貨を貯めます",
-   "updated": "2026-08-01T20:02:45+00:00",
+   "updated": "2026-08-02T02:24:54+00:00",
    "url": "https://ncode.syosetu.com/n5529cy/"
   },
   "n5619fv": {
