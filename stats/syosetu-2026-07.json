@@ -1,11 +1,11 @@
 {
  "pass": "2026-07",
  "totals": {
-  "bytes": 324410192,
-  "sentences": 8276305,
+  "bytes": 323248887,
+  "sentences": 8249310,
   "works": 268
  },
- "updated": "2026-08-02T18:39:37+00:00",
+ "updated": "2026-08-03T01:26:26+00:00",
  "works": {
   "n0063lr": {
    "bytes": 416969,
@@ -1843,14 +1843,14 @@
    "url": "https://ncode.syosetu.com/n6621fl/"
   },
   "n6680gq": {
-   "bytes": 835049,
-   "chapters": 207,
+   "bytes": 131371,
+   "chapters": 28,
    "id": "n6680gq",
-   "revision": "0.1.0+lp.e07011c9247f",
-   "sentences": 20324,
-   "sha256": "194977ce2cb17788b7c9f839a1417f0065c173401613a6e2c2f3999d893dbf2c",
+   "revision": "0.1.0+lp.79b59593dbc5",
+   "sentences": 3571,
+   "sha256": "02e2566eaf0a4de80d3565f9487af331ff0693bfbd805fe5271fdc315e0f48d6",
    "title": "濁る瞳で何を願う　ハイセルク戦記",
-   "updated": "2026-08-02T18:39:37+00:00",
+   "updated": "2026-08-03T01:26:26+00:00",
    "url": "https://ncode.syosetu.com/n6680gq/"
   },
   "n6682gf": {
@@ -2502,14 +2502,14 @@
    "url": "https://ncode.syosetu.com/n8562hc/"
   },
   "n8568fy": {
-   "bytes": 364815,
-   "chapters": 100,
+   "bytes": 99969,
+   "chapters": 30,
    "id": "n8568fy",
-   "revision": "0.1.0+lp.e07011c9247f",
-   "sentences": 6278,
-   "sha256": "71f7f0cd8e238db32b51a148af118cb4fa7ca9a24f6736f623845962007379a7",
+   "revision": "0.1.0+lp.79b59593dbc5",
+   "sentences": 1660,
+   "sha256": "c6bd0b9088f0c2c7033bd46b6cb834668365840c9357cc3f127368fd46d24b05",
    "title": "普通職の異世界スローライフ　～チート（があるくせに小者）な薬剤師の無双（しない）物語～",
-   "updated": "2026-08-02T18:39:37+00:00",
+   "updated": "2026-08-03T01:26:26+00:00",
    "url": "https://ncode.syosetu.com/n8568fy/"
   },
   "n8577dn": {
@@ -2798,14 +2798,14 @@
    "url": "https://ncode.syosetu.com/n9619hu/"
   },
   "n9623lp": {
-   "bytes": 289270,
-   "chapters": 98,
+   "bytes": 96489,
+   "chapters": 48,
    "id": "n9623lp",
-   "revision": "0.1.0+lp.e07011c9247f",
-   "sentences": 8178,
-   "sha256": "8d944b47c05f3ebd5b6f1145570946621b61e34699045def57e6b293237701eb",
+   "revision": "0.1.0+lp.79b59593dbc5",
+   "sentences": 2554,
+   "sha256": "6a8bbf7eed55d842faba7cdc16c9ab4c6b54f9ff65d80bcf54d64d7d001bd84e",
    "title": "【書籍化】辺境の【杖職人】が、自分の作る魔法杖は世界最高だと気付くまで ～「魔力ゼロ、愛想もない」と婚約破棄された私が、帝都でひっそり店を開いたら、いつの間にか国中の英雄が並ぶ行列店になっていました～",
-   "updated": "2026-08-02T18:39:37+00:00",
+   "updated": "2026-08-03T01:26:26+00:00",
    "url": "https://ncode.syosetu.com/n9623lp/"
   },
   "n9624gu": {
