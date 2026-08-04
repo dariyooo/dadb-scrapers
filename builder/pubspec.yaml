@@ -13,5 +13,21 @@ dependencies:
       path: dart_packages/language_processing
       ref: refactor-v4
 
+# The builder never calls the sqlite-extension-backed APIs; skip their
+# prebuilt binaries, which are only fetchable inside the dalang workspace.
+hooks:
+  user_defines:
+    sqlite_extensions:
+      allow_missing_binaries: true
+
+# language_processing declares its workspace-sibling packages by bare name,
+# which pub cannot resolve outside the dalang monorepo; point them at git.
+dependency_overrides:
+  sqlite_extensions:
+    git:
+      url: https://github.com/dariyooo/dalang.git
+      path: dart_packages/sqlite_extensions
+      ref: refactor-v4
+
 dev_dependencies:
   test: ^1.25.0
