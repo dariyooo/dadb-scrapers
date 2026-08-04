@@ -63,15 +63,17 @@ def publish_zips(zips: list[Path], works_path: Path, label: str, repo: str, site
     return published
 
 
-def notes_lines(asset_names: list[str], by_ncode: dict, site: str) -> list[str]:
-    """One human-readable index line per contained work, sorted by ncode."""
+def notes_lines(assets: list[dict], by_ncode: dict, site: str) -> list[str]:
+    """One download link per contained work, sorted by ncode."""
     lines = []
-    for name in asset_names:
+    for asset in assets:
+        name = asset["name"]
         if not name.endswith(".zip"):
             continue
         ncode = name.removeprefix(f"corpus-{site}-").removesuffix(".zip")
         work = by_ncode.get(ncode)
-        lines.append(f"{ncode} — {work['title']} ({work['writer']})" if work else ncode)
+        title = f"{ncode} — {work['title']} ({work['writer']})" if work else ncode
+        lines.append(f"[{title}]({asset['url']})")
     return sorted(lines)
 
 
@@ -80,7 +82,7 @@ def update_release_notes(repo: str, tag: str, by_ncode: dict, site: str) -> None
     result = _gh("release", "view", tag, "--repo", repo, "--json", "assets")
     if result.returncode != 0:
         raise RuntimeError(f"viewing {tag}: {result.stderr.strip()}")
-    assets = [a["name"] for a in json.loads(result.stdout)["assets"]]
+    assets = json.loads(result.stdout)["assets"]
     lines = notes_lines(assets, by_ncode, site)
     body = f"{len(lines)} works in this chunk:\n\n" + "\n".join(lines) + "\n"
     with tempfile.NamedTemporaryFile("w", suffix=".md", delete=False) as fh:

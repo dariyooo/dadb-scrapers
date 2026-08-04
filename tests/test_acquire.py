@@ -150,15 +150,15 @@ def test_notes_lines():
         "n2": {"ncode": "n2", "title": "二番目", "writer": "作者B"},
         "n1": {"ncode": "n1", "title": "一番目", "writer": "作者A"},
     }
-    lines = notes_lines(
-        ["corpus-syosetu-n2.zip", "corpus-syosetu-n1.zip", "corpus-syosetu-n9.zip"],
-        by_ncode,
-        "syosetu",
-    )
-    assert lines == [
-        "n1 — 一番目 (作者A)",
-        "n2 — 二番目 (作者B)",
-        "n9",
+    assets = [
+        {"name": "corpus-syosetu-n2.zip", "url": "https://x/n2.zip"},
+        {"name": "corpus-syosetu-n1.zip", "url": "https://x/n1.zip"},
+        {"name": "corpus-syosetu-n9.zip", "url": "https://x/n9.zip"},
+    ]
+    assert notes_lines(assets, by_ncode, "syosetu") == [
+        "[n1 — 一番目 (作者A)](https://x/n1.zip)",
+        "[n2 — 二番目 (作者B)](https://x/n2.zip)",
+        "[n9](https://x/n9.zip)",
     ]
 
 
