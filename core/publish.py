@@ -12,6 +12,7 @@ import argparse
 import json
 import subprocess
 import sys
+import tempfile
 from datetime import UTC, datetime
 from pathlib import Path
 
@@ -40,8 +41,11 @@ def _ensure_release(repo: str, tag: str, title: str, prerelease: bool) -> None:
 
 
 def publish_zips(zips: list[Path], works_path: Path, label: str, repo: str, site: str) -> int:
-    order = {w["ncode"]: i for i, w in enumerate(json.loads(works_path.read_text()))}
+    works = json.loads(works_path.read_text())
+    order = {w["ncode"]: i for i, w in enumerate(works)}
+    by_ncode = {w["ncode"]: w for w in works}
     published = 0
+    touched: set[str] = set()
     for zip_path in zips:
         ncode = zip_path.stem.removeprefix(f"corpus-{site}-")
         if ncode not in order:
@@ -53,7 +57,41 @@ def publish_zips(zips: list[Path], works_path: Path, label: str, repo: str, site
         if result.returncode != 0:
             raise RuntimeError(f"uploading {zip_path.name}: {result.stderr.strip()}")
         published += 1
+        touched.add(tag)
+    for tag in sorted(touched):
+        update_release_notes(repo, tag, by_ncode, site)
     return published
+
+
+def notes_lines(asset_names: list[str], by_ncode: dict, site: str) -> list[str]:
+    """One human-readable index line per contained work, sorted by ncode."""
+    lines = []
+    for name in asset_names:
+        if not name.endswith(".zip"):
+            continue
+        ncode = name.removeprefix(f"corpus-{site}-").removesuffix(".zip")
+        work = by_ncode.get(ncode)
+        lines.append(f"{ncode} — {work['title']} ({work['writer']})" if work else ncode)
+    return sorted(lines)
+
+
+def update_release_notes(repo: str, tag: str, by_ncode: dict, site: str) -> None:
+    """Regenerate the release body as an index of the works it contains."""
+    result = _gh("release", "view", tag, "--repo", repo, "--json", "assets")
+    if result.returncode != 0:
+        raise RuntimeError(f"viewing {tag}: {result.stderr.strip()}")
+    assets = [a["name"] for a in json.loads(result.stdout)["assets"]]
+    lines = notes_lines(assets, by_ncode, site)
+    body = f"{len(lines)} works in this chunk:\n\n" + "\n".join(lines) + "\n"
+    with tempfile.NamedTemporaryFile("w", suffix=".md", delete=False) as fh:
+        fh.write(body)
+        notes_path = fh.name
+    try:
+        result = _gh("release", "edit", tag, "--repo", repo, "--notes-file", notes_path)
+        if result.returncode != 0:
+            raise RuntimeError(f"editing notes of {tag}: {result.stderr.strip()}")
+    finally:
+        Path(notes_path).unlink(missing_ok=True)
 
 
 def build_manifest(stats: dict, works_path: Path, label: str, repo: str, site: str) -> dict:
@@ -126,9 +164,16 @@ def main() -> int:
     ap.add_argument("--pass-file", required=True)
     ap.add_argument("--zips", nargs="*", help="bank zips to upload")
     ap.add_argument("--manifest-from", help="stats json; publish the pass manifest")
+    ap.add_argument("--refresh-notes", nargs="*", help="chunk tags whose notes to regenerate")
     args = ap.parse_args()
 
     label = pass_label(Path(args.pass_file))
+    if args.refresh_notes:
+        works = json.loads(Path(args.works).read_text())
+        by_ncode = {w["ncode"]: w for w in works}
+        for tag in args.refresh_notes:
+            update_release_notes(args.repo, tag, by_ncode, args.site)
+            print(f"refreshed notes of {tag}")
     if args.zips:
         n = publish_zips(
             [Path(p) for p in args.zips], Path(args.works), label, args.repo, args.site

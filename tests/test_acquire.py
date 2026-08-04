@@ -143,6 +143,25 @@ def test_chunk_tag_and_manifest():
     assert chunk_tag("2026-08", 1999) == "2026-08.4"
 
 
+def test_notes_lines():
+    from core.publish import notes_lines
+
+    by_ncode = {
+        "n2": {"ncode": "n2", "title": "二番目", "writer": "作者B"},
+        "n1": {"ncode": "n1", "title": "一番目", "writer": "作者A"},
+    }
+    lines = notes_lines(
+        ["corpus-syosetu-n2.zip", "corpus-syosetu-n1.zip", "corpus-syosetu-n9.zip"],
+        by_ncode,
+        "syosetu",
+    )
+    assert lines == [
+        "n1 — 一番目 (作者A)",
+        "n2 — 二番目 (作者B)",
+        "n9",
+    ]
+
+
 def test_build_manifest(tmp_path):
     from core.publish import build_manifest
 
