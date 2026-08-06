@@ -1,11 +1,11 @@
 {
  "pass": "2026-07",
  "totals": {
-  "bytes": 654894221,
-  "sentences": 17094656,
-  "works": 721
+  "bytes": 703686097,
+  "sentences": 18366665,
+  "works": 805
  },
- "updated": "2026-08-06T00:41:50+00:00",
+ "updated": "2026-08-06T08:22:56+00:00",
  "works": {
   "n0020by": {
    "bytes": 99776,
@@ -83,6 +83,28 @@
    "title": "モブ高生の俺でも冒険者になればリア充になれますか？",
    "updated": "2026-08-03T20:01:43+00:00",
    "url": "https://ncode.syosetu.com/n0112fi/"
+  },
+  "n0121gf": {
+   "bytes": 497294,
+   "chapters": 165,
+   "id": "n0121gf",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 14644,
+   "sha256": "4b65acee79acda8a49aec1cc7a0c1614b3934baa93e6eacbcea1aad55ff288d8",
+   "title": "おっさん冒険者の地道な異世界旅【書籍２巻発売中】",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n0121gf/"
+  },
+  "n0157iv": {
+   "bytes": 418454,
+   "chapters": 173,
+   "id": "n0157iv",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 10352,
+   "sha256": "179cd733b4162533969cc4bc12f763095c011392a8f2cfaded8816710ab8defc",
+   "title": "【9/10ノベル3巻発売予定】巻き込まれて召喚された限界OL、ギルド所属の【魔物解体嬢】として奮闘中〜ドラゴンですか？もちろん捌けます！〜",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n0157iv/"
   },
   "n0160gd": {
    "bytes": 357655,
@@ -271,6 +293,17 @@
    "updated": "2026-08-02T18:39:37+00:00",
    "url": "https://ncode.syosetu.com/n0350em/"
   },
+  "n0353ho": {
+   "bytes": 8820,
+   "chapters": 1,
+   "id": "n0353ho",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 221,
+   "sha256": "21952a80044ce1d61f8a9e3c94b41f7c9e411b622eb0d2a052a95f2101c077e2",
+   "title": "聖女が来るから君を愛することはないと言われたのでお飾り王妃に徹していたら、夫と聖女の様子がおかしいのですが",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n0353ho/"
+  },
   "n0358dh": {
    "bytes": 1488092,
    "chapters": 575,
@@ -381,6 +414,17 @@
    "updated": "2026-08-03T08:40:59+00:00",
    "url": "https://ncode.syosetu.com/n0520gh/"
   },
+  "n0548hr": {
+   "bytes": 591061,
+   "chapters": 299,
+   "id": "n0548hr",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 16718,
+   "sha256": "36de9261b22bac41cd66f73c269d272a9924293db9ced880ca14f9bde444eb0e",
+   "title": "【ＷＥＢ版】俺以外誰も採取できない素材なのに「素材採取率が低い」とパワハラする幼馴染錬金術師と絶縁した専属魔導士、辺境の町でスローライフを送りたい。",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n0548hr/"
+  },
   "n0551gv": {
    "bytes": 1980389,
    "chapters": 436,
@@ -391,6 +435,17 @@
    "title": "悪役の王女に転生したけど、隠しキャラが隠れてない。【書籍化・コミカライズ】",
    "updated": "2026-08-03T14:50:53+00:00",
    "url": "https://ncode.syosetu.com/n0551gv/"
+  },
+  "n0552ep": {
+   "bytes": 732766,
+   "chapters": 178,
+   "id": "n0552ep",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 19539,
+   "sha256": "987c59c356f08d29dc7ee628c0f827119431e630475bc565b2778e49a6a6c3ab",
+   "title": "勇者様の幼馴染という職業の負けヒロインに転生したので、調合師にジョブチェンジします。",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n0552ep/"
   },
   "n0579dc": {
    "bytes": 990825,
@@ -601,6 +656,17 @@
    "updated": "2026-08-04T08:21:34+00:00",
    "url": "https://ncode.syosetu.com/n0729hx/"
   },
+  "n0730it": {
+   "bytes": 415827,
+   "chapters": 123,
+   "id": "n0730it",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 8967,
+   "sha256": "56027271404ede8d874f3f680f05f7dab58f9a4d74753f0159f7b84294dcabf8",
+   "title": "二度目はタの付く自由業",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n0730it/"
+  },
   "n0737ei": {
    "bytes": 477601,
    "chapters": 224,
@@ -689,6 +755,17 @@
    "updated": "2026-08-04T08:21:34+00:00",
    "url": "https://ncode.syosetu.com/n0807gn/"
   },
+  "n0813db": {
+   "bytes": 802130,
+   "chapters": 289,
+   "id": "n0813db",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 23518,
+   "sha256": "7359b34f856d04644344e5423cb8cd500a066f65792775f4a34e5cce568768a2",
+   "title": "神さまSHOPでチートの香り",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n0813db/"
+  },
   "n0821go": {
    "bytes": 1089152,
    "chapters": 380,
@@ -732,6 +809,17 @@
    "title": "あたしの悪徳領主様!!　～俺は星間国家の悪徳領主！　外伝～",
    "updated": "2026-08-06T00:41:50+00:00",
    "url": "https://ncode.syosetu.com/n0833hi/"
+  },
+  "n0836id": {
+   "bytes": 75914,
+   "chapters": 31,
+   "id": "n0836id",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 2195,
+   "sha256": "2ce7d107f82f8dae5a6d3f207e227ca90d7c543fc4b1e4bc93615fedea11a515",
+   "title": "【書籍化＆コミカライズ】義娘が悪役令嬢として破滅することを知ったので、めちゃくちゃ愛します　～契約結婚で私に関心がなかったはずの公爵様に、気づいたら溺愛されてました～",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n0836id/"
   },
   "n0865em": {
    "bytes": 313719,
@@ -865,6 +953,17 @@
    "updated": "2026-08-03T08:40:59+00:00",
    "url": "https://ncode.syosetu.com/n1031gv/"
   },
+  "n1039br": {
+   "bytes": 214320,
+   "chapters": 69,
+   "id": "n1039br",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 5319,
+   "sha256": "b41c510902e0f3fb606679247795b7b6736fb3032e550261b85f161968f9e4c0",
+   "title": "ヤンデレ系乙女ゲーの世界に転生してしまったようです",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n1039br/"
+  },
   "n1052ib": {
    "bytes": 48359,
    "chapters": 20,
@@ -898,6 +997,17 @@
    "updated": "2026-08-03T20:01:43+00:00",
    "url": "https://ncode.syosetu.com/n1068jk/"
   },
+  "n1094dl": {
+   "bytes": 770794,
+   "chapters": 189,
+   "id": "n1094dl",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 25692,
+   "sha256": "bff2534ff0f055e3d6e3df0df222432740b29db6b1864589564b6a752a8ef471",
+   "title": "私はご都合主義解決担当の王女である",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n1094dl/"
+  },
   "n1105gk": {
    "bytes": 87151,
    "chapters": 62,
@@ -920,6 +1030,17 @@
    "updated": "2026-08-03T08:40:59+00:00",
    "url": "https://ncode.syosetu.com/n1119fh/"
   },
+  "n1132dk": {
+   "bytes": 3748686,
+   "chapters": 558,
+   "id": "n1132dk",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 82899,
+   "sha256": "c8ad0ce29b7b49ae1c78bcd6adc4fb16d1df129bdad80cc4d80c533ed5f59a28",
+   "title": "呪術師は勇者になれない",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n1132dk/"
+  },
   "n1146do": {
    "bytes": 5141373,
    "chapters": 937,
@@ -930,6 +1051,17 @@
    "title": "捨て子になりましたが、魔法のおかげで大丈夫そうです",
    "updated": "2026-08-06T00:41:50+00:00",
    "url": "https://ncode.syosetu.com/n1146do/"
+  },
+  "n1157ge": {
+   "bytes": 1015824,
+   "chapters": 394,
+   "id": "n1157ge",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 29123,
+   "sha256": "25b70808b4e5932a0323f5312d8066246b7edf1249c208dbab0d832b43cfc396",
+   "title": "家の猫がポーションとってきた。",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n1157ge/"
   },
   "n1158go": {
    "bytes": 204860,
@@ -952,6 +1084,28 @@
    "title": "セミリタイアした冒険者はのんびり暮らしたい",
    "updated": "2026-08-06T00:41:50+00:00",
    "url": "https://ncode.syosetu.com/n1161ft/"
+  },
+  "n1199gc": {
+   "bytes": 564119,
+   "chapters": 132,
+   "id": "n1199gc",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 15594,
+   "sha256": "0d35959f812cfcc9ece80f4c424b8cf61590eb0f06439634fc40e12eaecf04d5",
+   "title": "【さびついた剣】を試しに強化してみたら、とんでもない魔剣に化けました",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n1199gc/"
+  },
+  "n1202hf": {
+   "bytes": 319096,
+   "chapters": 178,
+   "id": "n1202hf",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 11476,
+   "sha256": "e7e3d1f2d79300a261081735ce8c6c39da754cee7d18783b83a86f05630628d9",
+   "title": "【完結】窓際編集とバカにされた俺が、双子JKと同居することになった",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n1202hf/"
   },
   "n1217et": {
    "bytes": 1433465,
@@ -1052,6 +1206,17 @@
    "updated": "2026-08-04T00:46:59+00:00",
    "url": "https://ncode.syosetu.com/n1258gp/"
   },
+  "n1276hj": {
+   "bytes": 121670,
+   "chapters": 58,
+   "id": "n1276hj",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 2802,
+   "sha256": "34e330e6bdeca556ef54e02ba8cc7773c8efeabcb7a3034ce0808136c08bfc1a",
+   "title": "次期公爵夫人の役割だけを求めてきた、氷の薔薇と謳われる旦那様が家庭内ストーカーと化した件【書籍化コミカライズ】",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n1276hj/"
+  },
   "n1290ff": {
    "bytes": 586492,
    "chapters": 238,
@@ -1084,6 +1249,17 @@
    "title": "実は俺、最強でした？",
    "updated": "2026-08-02T01:47:51+00:00",
    "url": "https://ncode.syosetu.com/n1321ez/"
+  },
+  "n1354dw": {
+   "bytes": 599082,
+   "chapters": 256,
+   "id": "n1354dw",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 14919,
+   "sha256": "0e747e8e38785dea4f89ffc7669b12158097a9ed0fa83ea888552dca49ce9b92",
+   "title": "元将軍のアンデッドナイト",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n1354dw/"
   },
   "n1354hz": {
    "bytes": 21114,
@@ -1128,6 +1304,17 @@
    "title": "乙女ゲームのヒロインで最強サバイバル　【書籍化＆コミカライズ＆アニメ化企画進行中】",
    "updated": "2026-08-03T08:40:59+00:00",
    "url": "https://ncode.syosetu.com/n1391fj/"
+  },
+  "n1393fy": {
+   "bytes": 1403791,
+   "chapters": 334,
+   "id": "n1393fy",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 41042,
+   "sha256": "a79de18d5be991d16ff76b2e7e1c8d6584cdf20e0b4090a1ae056dc0fc55f8fb",
+   "title": "たとえば俺が、チャンピオンから王女のヒモにジョブチェンジしたとして。",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n1393fy/"
   },
   "n1405hb": {
    "bytes": 384829,
@@ -1360,6 +1547,17 @@
    "updated": "2026-08-03T20:01:43+00:00",
    "url": "https://ncode.syosetu.com/n1630fx/"
   },
+  "n1662ds": {
+   "bytes": 403061,
+   "chapters": 148,
+   "id": "n1662ds",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 10106,
+   "sha256": "d19bb8a851cb8080581eb841d4a718dedc666b702d3212b191de18824e191167",
+   "title": "悪役令嬢は、庶民に嫁ぎたい！！",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n1662ds/"
+  },
   "n1686he": {
    "bytes": 777928,
    "chapters": 361,
@@ -1425,6 +1623,17 @@
    "title": "神統記(テオゴニア)",
    "updated": "2026-08-03T20:01:43+00:00",
    "url": "https://ncode.syosetu.com/n1784ee/"
+  },
+  "n1808gv": {
+   "bytes": 95136,
+   "chapters": 23,
+   "id": "n1808gv",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 1621,
+   "sha256": "c35c4cf2b3260ad1a2f981e6f73182189b4b023e1c678453817ed8536824a062",
+   "title": "【書籍化&amp;コミカライズ作品】萌え豚転生~悪徳商人だけど勇者を差し置いて異世界無双してみた~【本編完結済】",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n1808gv/"
   },
   "n1832fm": {
    "bytes": 588365,
@@ -1492,6 +1701,17 @@
    "updated": "2026-08-02T08:37:26+00:00",
    "url": "https://ncode.syosetu.com/n1860fv/"
   },
+  "n1862hs": {
+   "bytes": 1153770,
+   "chapters": 288,
+   "id": "n1862hs",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 30827,
+   "sha256": "eeb5075705ea845bec62c7e003a81944e4ab8d121f75f94aecfdc95e0cae1611",
+   "title": "物語の黒幕に転生して～進化する魔剣とゲーム知識ですべてをねじ伏せる～（Web版）",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n1862hs/"
+  },
   "n1887gm": {
    "bytes": 85230,
    "chapters": 38,
@@ -1502,6 +1722,17 @@
    "title": "婚約破棄を狙って記憶喪失のフリをしたら、素っ気ない態度だった婚約者が「記憶を失う前の君は、俺にベタ惚れだった」という、とんでもない嘘をつき始めた",
    "updated": "2026-08-02T18:39:37+00:00",
    "url": "https://ncode.syosetu.com/n1887gm/"
+  },
+  "n1896dc": {
+   "bytes": 1435761,
+   "chapters": 422,
+   "id": "n1896dc",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 34604,
+   "sha256": "17dc1685f8705f934491b9968abc76f6bbaa0c6b4d1884ce4bb760cb60ff7149",
+   "title": "ガチャを回して仲間を増やす　最強の美少女軍団を作り上げろ",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n1896dc/"
   },
   "n1913hg": {
    "bytes": 167194,
@@ -1591,6 +1822,28 @@
    "updated": "2026-08-02T13:52:02+00:00",
    "url": "https://ncode.syosetu.com/n1970fg/"
   },
+  "n1980bm": {
+   "bytes": 3215817,
+   "chapters": 547,
+   "id": "n1980bm",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 68185,
+   "sha256": "d2d667a8be2c59c9e272c370d6e84248a0e57e7e377dcfa1d70aa5ba46c07ffc",
+   "title": "破壊の御子",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n1980bm/"
+  },
+  "n1980eh": {
+   "bytes": 1174671,
+   "chapters": 377,
+   "id": "n1980eh",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 26336,
+   "sha256": "d4d45262537a4cdf734e4914815d54b3cc043b88ad778ee4c54c49bb87b60ff9",
+   "title": "【漫画単行本発売中】斎藤義龍に生まれ変わったので、織田信長に国譲りして長生きするのを目指します！【本編完結】",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n1980eh/"
+  },
   "n1980en": {
    "bytes": 1964086,
    "chapters": 594,
@@ -1614,14 +1867,14 @@
    "url": "https://ncode.syosetu.com/n1996ed/"
   },
   "n2004fs": {
-   "bytes": 2373595,
-   "chapters": 411,
+   "bytes": 203055,
+   "chapters": 34,
    "id": "n2004fs",
    "revision": "0.1.0+lp.61827ff8f8c5",
-   "sentences": 66473,
-   "sha256": "5d0bab09fc0520845a643a819fdd8e5525918ea51c96fac410e89d480cd1b72a",
+   "sentences": 5670,
+   "sha256": "96b7086c155abaa199cc8527d47e192113c67fac75690a0e2d93fb53ad3a0de7",
    "title": "地球さんはレベルアップしました！",
-   "updated": "2026-08-06T00:41:50+00:00",
+   "updated": "2026-08-06T08:22:56+00:00",
    "url": "https://ncode.syosetu.com/n2004fs/"
   },
   "n2024er": {
@@ -1822,6 +2075,17 @@
    "updated": "2026-08-02T18:39:37+00:00",
    "url": "https://ncode.syosetu.com/n2199ex/"
   },
+  "n2202gk": {
+   "bytes": 17866,
+   "chapters": 2,
+   "id": "n2202gk",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 312,
+   "sha256": "5f20f084fad205d609efcab72a1049f998de961db24c8f025aa75f09e428cdfd",
+   "title": "エリザベートは愛想が尽きた",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n2202gk/"
+  },
   "n2211cx": {
    "bytes": 1173920,
    "chapters": 201,
@@ -1843,6 +2107,17 @@
    "title": "【アニメ放送中】レベル１だけどユニークスキルで最強です",
    "updated": "2026-08-01T20:02:45+00:00",
    "url": "https://ncode.syosetu.com/n2224dv/"
+  },
+  "n2256im": {
+   "bytes": 189136,
+   "chapters": 115,
+   "id": "n2256im",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 5136,
+   "sha256": "9910bff2d53b163e83fdfdc9b406620b61b41af910d54e87671e49f95e16689d",
+   "title": "【書籍化コミカライズ】城塞幼女シルヴィア　～実は万能な生活魔術を使って見捨てられた都市を発展させます～（web版）",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n2256im/"
   },
   "n2273dh": {
    "bytes": 4347097,
@@ -2009,6 +2284,17 @@
    "updated": "2026-08-01T20:02:45+00:00",
    "url": "https://ncode.syosetu.com/n2415eg/"
   },
+  "n2416ia": {
+   "bytes": 30137,
+   "chapters": 11,
+   "id": "n2416ia",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 992,
+   "sha256": "f575354d6713a355057b1c1a064402ca48aca772198d7c19aa29fe4aa1fc7e08",
+   "title": "オリヴィア嬢は愛されると死ぬ 　～ 旦那様、ちょっとこっち見すぎですわ ～【書籍化／コミカライズ】",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n2416ia/"
+  },
   "n2421eu": {
    "bytes": 920690,
    "chapters": 428,
@@ -2030,6 +2316,17 @@
    "title": "暇人、魔王の姿で異世界へ　～時々チートなぶらり旅～",
    "updated": "2026-08-03T08:40:59+00:00",
    "url": "https://ncode.syosetu.com/n2435cr/"
+  },
+  "n2448il": {
+   "bytes": 237797,
+   "chapters": 100,
+   "id": "n2448il",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 5194,
+   "sha256": "9926d268487839eaa05cfae662aa149775e8d7e18d763e53e4ad41e2441b7d51",
+   "title": "アラサー魔術師のゆる～いハーレムライフ 　～異世界と現代を行き来してのんびり暮らします～",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n2448il/"
   },
   "n2449ho": {
    "bytes": 118414,
@@ -2569,6 +2866,17 @@
    "updated": "2026-08-02T01:47:51+00:00",
    "url": "https://ncode.syosetu.com/n3148ex/"
   },
+  "n3159fs": {
+   "bytes": 1309327,
+   "chapters": 502,
+   "id": "n3159fs",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 37680,
+   "sha256": "53833baad9b0539fd191a0e45857ccbe95ae2b346c0226d1389a8a44cd5cb5d6",
+   "title": "【アニメ化決定】ロメリア戦記～魔王を倒した後も人類やばそうだから軍隊組織した～",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n3159fs/"
+  },
   "n3170ed": {
    "bytes": 2531347,
    "chapters": 664,
@@ -3009,6 +3317,17 @@
    "updated": "2026-08-03T20:01:43+00:00",
    "url": "https://ncode.syosetu.com/n3628ga/"
   },
+  "n3631do": {
+   "bytes": 2940648,
+   "chapters": 1175,
+   "id": "n3631do",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 79241,
+   "sha256": "45ac09831845761a8cdcc0a2d43ed7d2070b785dcaa49a21588d898e24ee7cb0",
+   "title": "結界師への転生",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n3631do/"
+  },
   "n3655ho": {
    "bytes": 277599,
    "chapters": 136,
@@ -3019,6 +3338,17 @@
    "title": "破局予定の悪女のはずが、冷徹公爵様が別れてくれません！",
    "updated": "2026-08-02T13:52:02+00:00",
    "url": "https://ncode.syosetu.com/n3655ho/"
+  },
+  "n3694gt": {
+   "bytes": 93041,
+   "chapters": 54,
+   "id": "n3694gt",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 2323,
+   "sha256": "8c0dc514eec0d2abacb999fb8af4155ddeb5c4a892835e4fe90e6552240025aa",
+   "title": "【WEB版】悲劇のヒロインぶる妹のせいで婚約破棄したのですが、何故か正義感の強い王太子に絡まれるようになりました【コミックス４巻発売中！】",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n3694gt/"
   },
   "n3704he": {
    "bytes": 529063,
@@ -3218,15 +3548,26 @@
    "updated": "2026-08-06T00:41:50+00:00",
    "url": "https://ncode.syosetu.com/n3881dn/"
   },
+  "n3911jc": {
+   "bytes": 232194,
+   "chapters": 93,
+   "id": "n3911jc",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 6003,
+   "sha256": "80f2608b5f725cfaf41f834d4c9445f2e6a0cc2823cc4e4f581734511a667ee3",
+   "title": "ゲーム中盤で死ぬ悪役貴族に転生したので、外れスキル【テイム】を駆使して最強を目指してみた",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n3911jc/"
+  },
   "n3920by": {
-   "bytes": 2136571,
-   "chapters": 1379,
+   "bytes": 520328,
+   "chapters": 473,
    "id": "n3920by",
    "revision": "0.1.0+lp.61827ff8f8c5",
-   "sentences": 69229,
-   "sha256": "8beb46434ad0caf77a2e01baf200b9c761440ef2f25bf3495e6014769be05ec2",
+   "sentences": 19045,
+   "sha256": "5f78d2114c704949741f2a7803af7f69d96d6e90da01064c29ea4626be8ccf9f",
    "title": "村人転生～最強のスローライフ",
-   "updated": "2026-08-06T00:41:50+00:00",
+   "updated": "2026-08-06T08:22:56+00:00",
    "url": "https://ncode.syosetu.com/n3920by/"
   },
   "n3930eh": {
@@ -3250,6 +3591,17 @@
    "title": "後悔するならご勝手に～あなたの選んだ聖女様とどうぞお幸せに～",
    "updated": "2026-08-02T13:52:02+00:00",
    "url": "https://ncode.syosetu.com/n3941hs/"
+  },
+  "n3956eq": {
+   "bytes": 759099,
+   "chapters": 335,
+   "id": "n3956eq",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 23971,
+   "sha256": "9fbe1b358acc6761e9c96ef221965b7d2268b4fd04925bd8f05ff02c314d063c",
+   "title": "継続は魔力なり《無能魔法が便利魔法に》　Web版",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n3956eq/"
   },
   "n3960io": {
    "bytes": 379078,
@@ -3305,6 +3657,17 @@
    "title": "謙虚、堅実をモットーに生きております！",
    "updated": "2026-08-01T14:39:15+00:00",
    "url": "https://ncode.syosetu.com/n4029bs/"
+  },
+  "n4033hl": {
+   "bytes": 123329,
+   "chapters": 53,
+   "id": "n4033hl",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 2444,
+   "sha256": "2e065709f06077bfe59e75de0180e282b2bcb599b752f542e633957abafbc549",
+   "title": "私の婚約者は、根暗で陰気だと言われる闇魔術師です。好き。",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n4033hl/"
   },
   "n4045ed": {
    "bytes": 312514,
@@ -3449,6 +3812,17 @@
    "updated": "2026-08-04T13:52:53+00:00",
    "url": "https://ncode.syosetu.com/n4169ha/"
   },
+  "n4171ha": {
+   "bytes": 296434,
+   "chapters": 187,
+   "id": "n4171ha",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 8149,
+   "sha256": "e3735ac155d6b1173db69d2c5f90e6c2391cbf7f772dbf3ab3ae80921516f48e",
+   "title": "【コミックス2月25日発売】婚約破棄された崖っぷち令嬢は、帝国の皇弟殿下と結ばれる",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n4171ha/"
+  },
   "n4175in": {
    "bytes": 951132,
    "chapters": 259,
@@ -3481,6 +3855,17 @@
    "title": "くまクマ熊ベアー",
    "updated": "2026-08-01T14:39:15+00:00",
    "url": "https://ncode.syosetu.com/n4185ci/"
+  },
+  "n4192gb": {
+   "bytes": 814567,
+   "chapters": 219,
+   "id": "n4192gb",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 21572,
+   "sha256": "615fdbcc285de88c7fa2f0affc394432dfaf594eb9234deddb970fea594afb06",
+   "title": "未実装のラスボス達が仲間になりました。",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n4192gb/"
   },
   "n4201gx": {
    "bytes": 203085,
@@ -3603,6 +3988,17 @@
    "updated": "2026-08-04T13:52:53+00:00",
    "url": "https://ncode.syosetu.com/n4312hg/"
   },
+  "n4343fv": {
+   "bytes": 282901,
+   "chapters": 156,
+   "id": "n4343fv",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 6585,
+   "sha256": "698435cf19644c6f5fdfe022b0505ae152416846603cda3902c937ce0159e326",
+   "title": "前世聖女は手を抜きたい　よきよき",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n4343fv/"
+  },
   "n4344dy": {
    "bytes": 879253,
    "chapters": 257,
@@ -3724,6 +4120,28 @@
    "updated": "2026-08-04T08:21:34+00:00",
    "url": "https://ncode.syosetu.com/n4528hj/"
   },
+  "n4532en": {
+   "bytes": 2878190,
+   "chapters": 657,
+   "id": "n4532en",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 79472,
+   "sha256": "c9eade3c9b1c6fbf695513d327d9ceb5f7ff6d2d7b986a780a98a48aa4e365c7",
+   "title": "冥王様が通るのですよ！",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n4532en/"
+  },
+  "n4545ij": {
+   "bytes": 139500,
+   "chapters": 85,
+   "id": "n4545ij",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 3447,
+   "sha256": "5856f3e6c43b92fc1462be5c65e554540011382e1e5ca9f4fd317e764ffefa98",
+   "title": "【Web版】旦那様、離縁はOKですがスローライフは継続希望です！～忌み嫌われた能力は、実は聖女よりも万能でした～【コミカライズ①巻発売中、書籍②巻発売中】",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n4545ij/"
+  },
   "n4546fc": {
    "bytes": 2552275,
    "chapters": 1265,
@@ -3757,6 +4175,28 @@
    "updated": "2026-08-06T00:41:50+00:00",
    "url": "https://ncode.syosetu.com/n4559ff/"
   },
+  "n4561kd": {
+   "bytes": 930581,
+   "chapters": 151,
+   "id": "n4561kd",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 29926,
+   "sha256": "aa69af1084e923b6fab9abf6bab91489c956c9e3941fc63b635c8f95d5e72dcc",
+   "title": "小物貴族が性に合うようです",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n4561kd/"
+  },
+  "n4595gp": {
+   "bytes": 486843,
+   "chapters": 171,
+   "id": "n4595gp",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 15821,
+   "sha256": "5427a461fafa18fd0748065357f3b640b2bae42a7759dd947b90425d6e535ffc",
+   "title": "転生したので、たった一人で地球と貿易してみる　～ゲーム好き魔術少女の冒険譚～",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n4595gp/"
+  },
   "n4616go": {
    "bytes": 163462,
    "chapters": 92,
@@ -3767,6 +4207,17 @@
    "title": "真実の愛を見つけたと言われて婚約破棄されたので、復縁を迫られても今さらもう遅いです！【書籍化・コミカライズ】",
    "updated": "2026-08-01T14:39:15+00:00",
    "url": "https://ncode.syosetu.com/n4616go/"
+  },
+  "n4623gx": {
+   "bytes": 120162,
+   "chapters": 40,
+   "id": "n4623gx",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 3528,
+   "sha256": "a6c7f9502355c6f4e1ac322cd6ce54849aff648f8807487b4fd3a9ea597de6ab",
+   "title": "【完全版】俺は何度でもお前を追放する～導きの本、希望の栞～【コミカライズ連載中】",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n4623gx/"
   },
   "n4647gh": {
    "bytes": 345500,
@@ -3867,6 +4318,28 @@
    "updated": "2026-08-01T14:39:15+00:00",
    "url": "https://ncode.syosetu.com/n4750dy/"
   },
+  "n4757gh": {
+   "bytes": 23342,
+   "chapters": 11,
+   "id": "n4757gh",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 454,
+   "sha256": "c7170456a11cdddf2e2c36ba2bbce0ff10c5b49528eceb0796f8861f784bde0f",
+   "title": "【コミカライズ】レイドール聖剣戦記",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n4757gh/"
+  },
+  "n4760cl": {
+   "bytes": 410333,
+   "chapters": 63,
+   "id": "n4760cl",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 13140,
+   "sha256": "de25c5ae5feba3a2a217bcfed498d541df2f92d0461cb280bb9a5f4752d6b98a",
+   "title": "堕落の王【Web版】",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n4760cl/"
+  },
   "n4764du": {
    "bytes": 1373020,
    "chapters": 310,
@@ -3910,6 +4383,17 @@
    "title": "【web版】クラスで陰キャの俺が実は大人気バンドのボーカルな件",
    "updated": "2026-08-04T00:46:59+00:00",
    "url": "https://ncode.syosetu.com/n4814fw/"
+  },
+  "n4816he": {
+   "bytes": 902483,
+   "chapters": 351,
+   "id": "n4816he",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 26626,
+   "sha256": "e002f74eadaaeb8405c81e37b887b27b5e2530f83783350c1a424afd7090aa54",
+   "title": "この世界がいずれ滅ぶことを、俺だけが知っている",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n4816he/"
   },
   "n4836fm": {
    "bytes": 1282380,
@@ -4054,6 +4538,17 @@
    "updated": "2026-08-03T20:01:43+00:00",
    "url": "https://ncode.syosetu.com/n5036fc/"
   },
+  "n5038gy": {
+   "bytes": 332417,
+   "chapters": 250,
+   "id": "n5038gy",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 12362,
+   "sha256": "17b0bba0cd847ba0a14638015632d5feedbee8470649fd098a02bbee6a1b1df3",
+   "title": "【完結】高校生WEB作家のモテ生活 「あんたが神作家なわけないでしょ」と僕を振った幼馴染が後悔してるけどもう遅い",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n5038gy/"
+  },
   "n5040ce": {
    "bytes": 270110,
    "chapters": 52,
@@ -4197,6 +4692,17 @@
    "updated": "2026-08-06T00:41:50+00:00",
    "url": "https://ncode.syosetu.com/n5240bc/"
   },
+  "n5240fv": {
+   "bytes": 172406,
+   "chapters": 95,
+   "id": "n5240fv",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 5926,
+   "sha256": "da5979dc88e3feea8568952e5ab826dc8df12e5d8e7857ab8d95949c203276d6",
+   "title": "【コミカライズ３巻発売♪】虐待されていた商家の令嬢は聖女の力を手に入れ、無自覚に容赦なく逆襲する【書籍化】",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n5240fv/"
+  },
   "n5242fx": {
    "bytes": 363858,
    "chapters": 235,
@@ -4317,6 +4823,17 @@
    "title": "『ショップ』スキルさえあれば、ダンジョン化した世界でも楽勝だ　～迫害された少年の最強ざまぁライフ～",
    "updated": "2026-08-04T08:21:34+00:00",
    "url": "https://ncode.syosetu.com/n5455gb/"
+  },
+  "n5458ik": {
+   "bytes": 229942,
+   "chapters": 67,
+   "id": "n5458ik",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 4787,
+   "sha256": "d018bd7dffd235a6a4fa57e16d4c5c03a819140a3d1aa34b0ac4abcd5b8272d5",
+   "title": "【5/16～  コミカライズ連載開始！】悪役令嬢になりましたが、何か？【完結済】",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n5458ik/"
   },
   "n5475dz": {
    "bytes": 1086863,
@@ -4472,6 +4989,17 @@
    "updated": "2026-08-03T08:40:59+00:00",
    "url": "https://ncode.syosetu.com/n5577es/"
   },
+  "n5599in": {
+   "bytes": 146937,
+   "chapters": 58,
+   "id": "n5599in",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 4016,
+   "sha256": "c3923c52b4a617cb513fe598e4b908a5146a649b1e4e61712e467dfb054bd92e",
+   "title": "田舎者にはよくわかりません～ぼんやり辺境伯令嬢は、断罪された公爵令息をお持ち帰りする～【書籍化＆コミカライズ】",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n5599in/"
+  },
   "n5619fv": {
    "bytes": 614077,
    "chapters": 346,
@@ -4549,6 +5077,17 @@
    "updated": "2026-08-04T13:52:53+00:00",
    "url": "https://ncode.syosetu.com/n5681hh/"
   },
+  "n5705ch": {
+   "bytes": 526557,
+   "chapters": 105,
+   "id": "n5705ch",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 14477,
+   "sha256": "7b54d4301d5d35ba457985add7455c1d5a053fe84f53e790c5a0ddb7aa1758c3",
+   "title": "エルフ転生からのチート建国記",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n5705ch/"
+  },
   "n5714hl": {
    "bytes": 596505,
    "chapters": 140,
@@ -4570,6 +5109,17 @@
    "title": "永年雇用は可能でしょうか",
    "updated": "2026-08-03T14:50:53+00:00",
    "url": "https://ncode.syosetu.com/n5763hc/"
+  },
+  "n5764bn": {
+   "bytes": 479816,
+   "chapters": 192,
+   "id": "n5764bn",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 12518,
+   "sha256": "98d6c72d14e2eee57115e1adba576ce92028a779114fed5108679526c2e4f65e",
+   "title": "先代勇者は隠居したい(仮題)",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n5764bn/"
   },
   "n5775gz": {
    "bytes": 153748,
@@ -4791,6 +5341,17 @@
    "updated": "2026-08-01T14:39:15+00:00",
    "url": "https://ncode.syosetu.com/n6006cw/"
   },
+  "n6017dm": {
+   "bytes": 338095,
+   "chapters": 156,
+   "id": "n6017dm",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 7788,
+   "sha256": "70e3eff54f0931dec8c950784608d316f9dee179dfe0ebbd79c4f40eb0956978",
+   "title": "紅の死神は眠り姫の寝起きに悩まされる",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n6017dm/"
+  },
   "n6022cs": {
    "bytes": 388122,
    "chapters": 182,
@@ -4867,6 +5428,17 @@
    "title": "【小説8巻5/19発売・コミカライズ３巻発売中】転生アラサー女子の異世改活 　政略結婚は嫌なので、雑学知識で楽しい改革ライフを決行しちゃいます！【Web版】",
    "updated": "2026-08-03T08:40:59+00:00",
    "url": "https://ncode.syosetu.com/n6117hg/"
+  },
+  "n6131gp": {
+   "bytes": 12798,
+   "chapters": 1,
+   "id": "n6131gp",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 220,
+   "sha256": "f1bbb71dcdc3e891fcb7e9964bc7a7a15cb8ba7daf248649bc65a7c6590ee384",
+   "title": "【コミカライズ】貧乏令嬢はジャムを煮る　～妹の代わりに辺境伯に嫁ぐことになった平凡な貧乏子爵の令嬢ですが、このたび旦那様に溺愛されてスローライフを堪能することになりました～",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n6131gp/"
   },
   "n6132jr": {
    "bytes": 559456,
@@ -5011,6 +5583,17 @@
    "updated": "2026-08-04T13:52:53+00:00",
    "url": "https://ncode.syosetu.com/n6274hb/"
   },
+  "n6306et": {
+   "bytes": 434440,
+   "chapters": 131,
+   "id": "n6306et",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 12760,
+   "sha256": "5defa61caba09d22920787ad31e4c5f43d3009dd18f9bb5445b7949435e86910",
+   "title": "ウィル様は今日も魔法で遊んでいます。",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n6306et/"
+  },
   "n6309ex": {
    "bytes": 691324,
    "chapters": 203,
@@ -5031,6 +5614,17 @@
    "title": "転生したらスライムだった件",
    "updated": "2026-08-01T03:51:07+00:00",
    "url": "https://ncode.syosetu.com/n6316bn/"
+  },
+  "n6344hu": {
+   "bytes": 2087323,
+   "chapters": 313,
+   "id": "n6344hu",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 59688,
+   "sha256": "098fbd4689bd25febb986ec63fd819acef259a12ea284946a2e40bb18562c307",
+   "title": "【コミックス第１巻発売中！】　神様なんか信じてないけど、【神の奇跡】はぶん回す　～自分勝手に魔法を増やして、異世界で無双する（予定）～　【第五回アース・スターノベル大賞入選】",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n6344hu/"
   },
   "n6362fe": {
    "bytes": 896360,
@@ -5406,6 +6000,17 @@
    "updated": "2026-08-04T13:52:53+00:00",
    "url": "https://ncode.syosetu.com/n6889ib/"
   },
+  "n6891gq": {
+   "bytes": 1909283,
+   "chapters": 324,
+   "id": "n6891gq",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 39735,
+   "sha256": "fa8c1aaf0122686e0afc169ca0eb10f6dfab6182845ed6a603392948e8bcec61",
+   "title": "我輩は猫魔導師である！  〜キジトラ・ルークの快適ネコ生活〜",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n6891gq/"
+  },
   "n6902el": {
    "bytes": 556641,
    "chapters": 227,
@@ -5438,6 +6043,17 @@
    "title": "【web版】ブチ切れ令嬢は報復を誓いました。〜魔導書の力で祖国を叩き潰します〜",
    "updated": "2026-08-06T00:41:50+00:00",
    "url": "https://ncode.syosetu.com/n6981gn/"
+  },
+  "n6990ch": {
+   "bytes": 929627,
+   "chapters": 186,
+   "id": "n6990ch",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 23451,
+   "sha256": "c488b7d6330d6e9a15ed99532ff36ed269d3f727c7977052a7185657fc956d49",
+   "title": "NO FATIGUE 24時間戦える男の転生譚",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n6990ch/"
   },
   "n7006cm": {
    "bytes": 130244,
@@ -5516,6 +6132,17 @@
    "updated": "2026-08-04T13:52:53+00:00",
    "url": "https://ncode.syosetu.com/n7070gz/"
   },
+  "n7083lf": {
+   "bytes": 60379,
+   "chapters": 25,
+   "id": "n7083lf",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 1540,
+   "sha256": "9a1a2ba096a72df988121268c82218a96e5713feeec1fde2029ca9ce53063876",
+   "title": "マリアンデール　～地味令嬢だったけど、記憶喪失になったらオソロシー女になったらしい～",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n7083lf/"
+  },
   "n7094fo": {
    "bytes": 294522,
    "chapters": 184,
@@ -5526,6 +6153,17 @@
    "title": "栽培チートで最強菜園　～え、ただの家庭菜園ですけど？～",
    "updated": "2026-08-02T01:47:51+00:00",
    "url": "https://ncode.syosetu.com/n7094fo/"
+  },
+  "n7105co": {
+   "bytes": 1279932,
+   "chapters": 496,
+   "id": "n7105co",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 32661,
+   "sha256": "2b0777e8575aa32b3c00e06c5642a7d53bb669cc7442dc238a2ac7735e46aa20",
+   "title": "大陸英雄戦記",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n7105co/"
   },
   "n7120hp": {
    "bytes": 759517,
@@ -5581,6 +6219,17 @@
    "title": "草魔法師クロエの二度目の人生",
    "updated": "2026-08-03T14:50:53+00:00",
    "url": "https://ncode.syosetu.com/n7152gj/"
+  },
+  "n7156go": {
+   "bytes": 406297,
+   "chapters": 253,
+   "id": "n7156go",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 13512,
+   "sha256": "86959f5d0b3ea447e3940fda27691cc8f4a723e090e7b907c957139c8838ab30",
+   "title": "生産魔法師のらくらく辺境開拓～最強の亜人たちとホワイト国家を築きます！～",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n7156go/"
   },
   "n7216dr": {
    "bytes": 2952554,
@@ -5780,6 +6429,17 @@
    "updated": "2026-08-02T08:37:26+00:00",
    "url": "https://ncode.syosetu.com/n7463ho/"
   },
+  "n7466em": {
+   "bytes": 414885,
+   "chapters": 85,
+   "id": "n7466em",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 8887,
+   "sha256": "6caf632330a8de35ed33a0c25862fdbc6b2baaec39c7ec159a7c253ab08d3fe2",
+   "title": "仮初め寵妃のプライド　　～皇宮に咲く花は未来を希う～",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n7466em/"
+  },
   "n7479gf": {
    "bytes": 114456,
    "chapters": 48,
@@ -5867,6 +6527,17 @@
    "title": "勇者パーティを追い出された器用貧乏～パーティ事情で付与術士をやっていた剣士、万能へと至る～【Web版】",
    "updated": "2026-08-02T13:52:02+00:00",
    "url": "https://ncode.syosetu.com/n7533gt/"
+  },
+  "n7551ic": {
+   "bytes": 558976,
+   "chapters": 173,
+   "id": "n7551ic",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 9890,
+   "sha256": "169dd9e61823fff0a16e80fcb3d60bcacfec2bc681c554ec16c85eca6a7e4251",
+   "title": "目の前の惨劇で前世を思い出したけど、あまりにも問題山積みでいっぱいいっぱいです。【web版】",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n7551ic/"
   },
   "n7575gq": {
    "bytes": 869177,
@@ -5999,6 +6670,17 @@
    "title": "かわいいコックさん",
    "updated": "2026-08-03T08:40:59+00:00",
    "url": "https://ncode.syosetu.com/n7657bb/"
+  },
+  "n7668gf": {
+   "bytes": 6963,
+   "chapters": 1,
+   "id": "n7668gf",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 130,
+   "sha256": "e67d31104d8fbdae31ef57a16767a94578ae321928e653aa6172425ca3c0ffc6",
+   "title": "「第二王子が婚約破棄したってよ！」",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n7668gf/"
   },
   "n7671do": {
    "bytes": 1066341,
@@ -6231,15 +6913,26 @@
    "url": "https://ncode.syosetu.com/n7921gj/"
   },
   "n7928dt": {
-   "bytes": 331010,
-   "chapters": 92,
+   "bytes": 973822,
+   "chapters": 299,
    "id": "n7928dt",
    "revision": "0.1.0+lp.61827ff8f8c5",
-   "sentences": 8012,
-   "sha256": "a6cce2920beb52388d26274876ea28f6600306a3194fe4e0dcbacbfbae0a1cb9",
+   "sentences": 23058,
+   "sha256": "71cfe2912d63960c62f40a179cab3562920265ef501fbb8dd0cf47916ecee99e",
    "title": "元最強の剣士は、異世界魔法に憧れる",
-   "updated": "2026-08-06T00:41:50+00:00",
+   "updated": "2026-08-06T08:22:56+00:00",
    "url": "https://ncode.syosetu.com/n7928dt/"
+  },
+  "n7930dd": {
+   "bytes": 546223,
+   "chapters": 191,
+   "id": "n7930dd",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 17872,
+   "sha256": "65e1e0758ad13cb9aaf9a5372150f3cd374c9c44afbca6dcd58c85addb46d580",
+   "title": "贅沢三昧したいのです！",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n7930dd/"
   },
   "n7940cn": {
    "bytes": 582579,
@@ -6296,6 +6989,17 @@
    "updated": "2026-08-01T20:02:45+00:00",
    "url": "https://ncode.syosetu.com/n7945fn/"
   },
+  "n7949hh": {
+   "bytes": 356546,
+   "chapters": 484,
+   "id": "n7949hh",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 13254,
+   "sha256": "b42eb4de4f7221ffc51447532433e0e65b8ed45c0fd2f76f059dd9c0cbc9ea4d",
+   "title": "蒼炎の魔術師　〜冒険への飛翔〜",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n7949hh/"
+  },
   "n7979hv": {
    "bytes": 815669,
    "chapters": 438,
@@ -6351,6 +7055,17 @@
    "updated": "2026-08-04T08:21:34+00:00",
    "url": "https://ncode.syosetu.com/n8001hc/"
   },
+  "n8005ls": {
+   "bytes": 172016,
+   "chapters": 144,
+   "id": "n8005ls",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 4561,
+   "sha256": "5da85fccd6ab02830500c45eaeaf5823fe01cb03a4a6aec1a4766caccd3f1b0d",
+   "title": "【連載版】加護なしの第八王女は、前世が社畜だったので王宮生活がイージーモードにしか見えない",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n8005ls/"
+  },
   "n8020gn": {
    "bytes": 163289,
    "chapters": 88,
@@ -6372,6 +7087,17 @@
    "title": "【祝・総合評価２０万突破！】　隠れ転生勇者　～チートスキルと勇者ジョブを隠して第二の人生を楽しんでやる！～",
    "updated": "2026-08-02T18:39:37+00:00",
    "url": "https://ncode.syosetu.com/n8021hu/"
+  },
+  "n8023gv": {
+   "bytes": 124887,
+   "chapters": 105,
+   "id": "n8023gv",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 4584,
+   "sha256": "3c64c3790a92b875e39e7ebbbc115e03299d1a666563c5910cc82077226f5f8a",
+   "title": "風間君の嘘は彼女達にはバレバレです　～入れ替わりは元に戻ってからがラブコメです！～",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n8023gv/"
   },
   "n8024hd": {
    "bytes": 228155,
@@ -6427,6 +7153,17 @@
    "title": "骸骨魔術師のプレイ日記",
    "updated": "2026-08-06T00:41:50+00:00",
    "url": "https://ncode.syosetu.com/n8061es/"
+  },
+  "n8091eb": {
+   "bytes": 425725,
+   "chapters": 145,
+   "id": "n8091eb",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 13378,
+   "sha256": "9b5fc2c1dd14f87b6c494611d9d274a324154ef4d8ac9cbd1eea54dcaf16e52c",
+   "title": "悪役令嬢は旦那様を痩せさせたい",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n8091eb/"
   },
   "n8106fu": {
    "bytes": 631400,
@@ -6493,6 +7230,17 @@
    "title": "蘇りの魔王",
    "updated": "2026-08-03T14:50:53+00:00",
    "url": "https://ncode.syosetu.com/n8162cb/"
+  },
+  "n8162dc": {
+   "bytes": 257851,
+   "chapters": 86,
+   "id": "n8162dc",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 7198,
+   "sha256": "51f9d11155c97896fe21c2daf10ababd3df017e25df74db5997b1d60372b1f27",
+   "title": "借り暮らしのご令嬢～没落令嬢、貧乏騎士のメイドになります～",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n8162dc/"
   },
   "n8166ha": {
    "bytes": 691842,
@@ -6681,6 +7429,17 @@
    "updated": "2026-08-06T00:41:50+00:00",
    "url": "https://ncode.syosetu.com/n8354gr/"
   },
+  "n8354ht": {
+   "bytes": 902772,
+   "chapters": 186,
+   "id": "n8354ht",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 19994,
+   "sha256": "9629b3298e9d59521816b0e813bfb879c59dcf3d0b22b30273984a6b0cd8dba7",
+   "title": "名代辻そば異世界店",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n8354ht/"
+  },
   "n8356ga": {
    "bytes": 818919,
    "chapters": 236,
@@ -6703,6 +7462,17 @@
    "updated": "2026-08-04T00:46:59+00:00",
    "url": "https://ncode.syosetu.com/n8366dn/"
   },
+  "n8381gq": {
+   "bytes": 99350,
+   "chapters": 52,
+   "id": "n8381gq",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 2656,
+   "sha256": "9956b57acb5f9210ff26f9e75be685de7429ab74313e0e486dc63fc0c4387eb6",
+   "title": "【書籍化】100年後に転生した私、前世の従騎士に求婚されました～陛下は私が元・王女だとお気づきでないようです～（WEB版）",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n8381gq/"
+  },
   "n8385gp": {
    "bytes": 59967,
    "chapters": 40,
@@ -6713,6 +7483,17 @@
    "title": "婚約破棄の悪意は娼館からお返しします【コミカライズ】",
    "updated": "2026-08-06T00:41:50+00:00",
    "url": "https://ncode.syosetu.com/n8385gp/"
+  },
+  "n8386ho": {
+   "bytes": 342219,
+   "chapters": 202,
+   "id": "n8386ho",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 8820,
+   "sha256": "363d70fc0509afbf0cc2dee3d186e0e0597d4c3f67a28a500c57ac5ae60d43c3",
+   "title": "死に戻りの幸薄令嬢、今世では最恐ラスボスお義兄様に溺愛されてます",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n8386ho/"
   },
   "n8390gi": {
    "bytes": 342987,
@@ -6802,6 +7583,17 @@
    "updated": "2026-08-02T01:47:51+00:00",
    "url": "https://ncode.syosetu.com/n8459gk/"
   },
+  "n8462cr": {
+   "bytes": 608175,
+   "chapters": 233,
+   "id": "n8462cr",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 18668,
+   "sha256": "166d174633160d1a148c9efbb4389f52e6596318cabedeb110e684bb3f537651",
+   "title": "俺だけ帰れるクラス転移",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n8462cr/"
+  },
   "n8473hv": {
    "bytes": 163196,
    "chapters": 85,
@@ -6845,6 +7637,17 @@
    "title": "【完結済】異世界薬局（EP4）/【連載中】世界薬局（EP4.1）",
    "updated": "2026-08-02T08:37:26+00:00",
    "url": "https://ncode.syosetu.com/n8541cr/"
+  },
+  "n8549gc": {
+   "bytes": 199884,
+   "chapters": 81,
+   "id": "n8549gc",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 4412,
+   "sha256": "b0dd81f5878fb0b7f0d76a8b9c13a14ee645a7970b66b711325d3617e1b3029a",
+   "title": "陛下、心の声がだだ漏れです！",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n8549gc/"
   },
   "n8558fh": {
    "bytes": 908256,
@@ -6934,6 +7737,17 @@
    "updated": "2026-08-03T08:40:59+00:00",
    "url": "https://ncode.syosetu.com/n8618ef/"
   },
+  "n8633he": {
+   "bytes": 38086,
+   "chapters": 1,
+   "id": "n8633he",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 753,
+   "sha256": "db84ec2879b9ee70d4ab3a98bd783c0a826210e528ae7a50deb23750725b514f",
+   "title": "【電子書籍化】悪役令嬢を断罪した、そのあとで",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n8633he/"
+  },
   "n8642gc": {
    "bytes": 419850,
    "chapters": 337,
@@ -6999,6 +7813,17 @@
    "title": "政略結婚の夫に「愛さなくて結構です」と宣言したら溺愛が始まりました",
    "updated": "2026-08-04T00:46:59+00:00",
    "url": "https://ncode.syosetu.com/n8698hw/"
+  },
+  "n8699gx": {
+   "bytes": 180925,
+   "chapters": 74,
+   "id": "n8699gx",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 6051,
+   "sha256": "c76f0cdbf6afc93e47db96d184a174110bc8d66fdfd60f62db882e77a885eef7",
+   "title": "【コミカライズ連載中】2番手の女",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n8699gx/"
   },
   "n8703hn": {
    "bytes": 254210,
@@ -7197,6 +8022,17 @@
    "updated": "2026-08-06T00:41:50+00:00",
    "url": "https://ncode.syosetu.com/n8971hh/"
   },
+  "n9004cy": {
+   "bytes": 455795,
+   "chapters": 102,
+   "id": "n9004cy",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 11837,
+   "sha256": "375a2dac8eda351c89f957b2ae91c92db479c237e9633c4c6ae4bf19f987a54c",
+   "title": "なんちゃってシンデレラ【WEB版】",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n9004cy/"
+  },
   "n9019ib": {
    "bytes": 20400,
    "chapters": 1,
@@ -7373,6 +8209,17 @@
    "updated": "2026-08-03T08:40:59+00:00",
    "url": "https://ncode.syosetu.com/n9350eg/"
   },
+  "n9387he": {
+   "bytes": 156687,
+   "chapters": 75,
+   "id": "n9387he",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 3704,
+   "sha256": "b59cb4647caaeaf00ae3972df45a35434bfd3bc7c290b48c5919181c4a822056",
+   "title": "山に捨てられた俺、トカゲの養子になる　〜魔法を極めて親を超えたけど、親が伝説の古竜だったなんて知らない〜",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n9387he/"
+  },
   "n9407fu": {
    "bytes": 1437361,
    "chapters": 710,
@@ -7394,6 +8241,17 @@
    "title": "モンスターがあふれる世界になったので、好きに生きたいと思います",
    "updated": "2026-08-01T14:39:15+00:00",
    "url": "https://ncode.syosetu.com/n9418eg/"
+  },
+  "n9431gr": {
+   "bytes": 569661,
+   "chapters": 224,
+   "id": "n9431gr",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 15259,
+   "sha256": "6482fd1201bea2bfb3d3f401b297f6dc98d8f5bb87930e648d4d86e0fe1f8e3c",
+   "title": "【書籍化】捨てられ令嬢は錬金術師になりました。稼いだお金で元敵国の将を購入します。",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n9431gr/"
   },
   "n9433gn": {
    "bytes": 1097377,
@@ -7461,6 +8319,17 @@
    "updated": "2026-08-01T20:02:45+00:00",
    "url": "https://ncode.syosetu.com/n9483ge/"
   },
+  "n9505bf": {
+   "bytes": 520746,
+   "chapters": 70,
+   "id": "n9505bf",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 14356,
+   "sha256": "112ee5d653169e54afd30d345a9908c71c00595e2a07ad9c8a3864ccd7e503d0",
+   "title": "ワールドオーダー",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n9505bf/"
+  },
   "n9511bs": {
    "bytes": 5961494,
    "chapters": 964,
@@ -7504,6 +8373,17 @@
    "title": "役立たずスキル【ログインボーナス】で捨てられた令嬢が、本当の幸せをつかむまで",
    "updated": "2026-08-04T00:46:59+00:00",
    "url": "https://ncode.syosetu.com/n9512ij/"
+  },
+  "n9517fc": {
+   "bytes": 1309467,
+   "chapters": 324,
+   "id": "n9517fc",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 30070,
+   "sha256": "fa9e7580b4a086b6243a8346eae4b37b09b75fdc88a1377bc0feda205ca765ec",
+   "title": "打撃系鬼っ娘が征く配信道！",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n9517fc/"
   },
   "n9525fd": {
    "bytes": 1274827,
@@ -7701,6 +8581,17 @@
    "updated": "2026-08-02T13:52:02+00:00",
    "url": "https://ncode.syosetu.com/n9693gs/"
   },
+  "n9693hr": {
+   "bytes": 285998,
+   "chapters": 102,
+   "id": "n9693hr",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 7202,
+   "sha256": "29843ffbcdd2b43d84486d92a7e502d5700200cd5d82988e5555c236ca4e8119",
+   "title": "余命わずかだからと追放された聖女ですが、巡礼の旅に出たら超健康になりました",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n9693hr/"
+  },
   "n9711hl": {
    "bytes": 146223,
    "chapters": 53,
@@ -7744,6 +8635,17 @@
    "title": "味方が弱すぎて補助魔法に徹していた宮廷魔法師、追放されて最強を目指す",
    "updated": "2026-08-02T01:47:51+00:00",
    "url": "https://ncode.syosetu.com/n9736gn/"
+  },
+  "n9744ie": {
+   "bytes": 134796,
+   "chapters": 56,
+   "id": "n9744ie",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 3324,
+   "sha256": "dee3824da52eb10beff2bd14bd61370307e5a6bfcab2a56451f1aab2ac4ae125",
+   "title": "疲労困憊の子爵サーシャは失踪する　〜家出先で次期辺境伯が構ってきて困るのですが！",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n9744ie/"
   },
   "n9773bj": {
    "bytes": 801955,
@@ -7844,6 +8746,17 @@
    "updated": "2026-08-04T13:52:53+00:00",
    "url": "https://ncode.syosetu.com/n9850fl/"
   },
+  "n9854hf": {
+   "bytes": 583515,
+   "chapters": 253,
+   "id": "n9854hf",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 17687,
+   "sha256": "50e2a08e3d0421df82c6867e8f2e688fb0db263616bc7abbdf83e2431b51c6b1",
+   "title": "【コミカライズ】異世界転生したら辺境伯令嬢だった　〜推しと共に生きる辺境生活〜",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n9854hf/"
+  },
   "n9863da": {
    "bytes": 1006429,
    "chapters": 448,
@@ -7854,6 +8767,17 @@
    "title": "成長チートでなんでもできるようになったが、無職だけは辞められないようです",
    "updated": "2026-08-02T08:37:26+00:00",
    "url": "https://ncode.syosetu.com/n9863da/"
+  },
+  "n9923hb": {
+   "bytes": 341676,
+   "chapters": 130,
+   "id": "n9923hb",
+   "revision": "0.1.0+lp.61827ff8f8c5",
+   "sentences": 9247,
+   "sha256": "5f707ad25f8705d902e2c8a28000f12aa5bdd721ffc92a8f7fb3f1c501e38bbc",
+   "title": "【全6巻】悪役令嬢と悪役令息が、出逢って恋に落ちたなら ～名無しの精霊と契約して追い出された令嬢は、今日も令息と競い合っているようです～【コミック⑦5/15発売】",
+   "updated": "2026-08-06T08:22:56+00:00",
+   "url": "https://ncode.syosetu.com/n9923hb/"
   },
   "n9925gz": {
    "bytes": 125354,
