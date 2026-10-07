@@ -23,10 +23,28 @@ hooks:
 # language_processing declares its workspace-sibling packages by bare name,
 # which pub cannot resolve outside the dalang monorepo; point them at git.
 dependency_overrides:
+  # dalang's workspace settles these through da_db's overrides; mirror them.
+  code_assets: ^2.0.0
+  hooks: ^2.2.0
   sqlite_extensions:
     git:
       url: https://github.com/dariyooo/dalang.git
       path: dart_packages/sqlite_extensions
+      ref: refactor-v4
+  ml_inference:
+    git:
+      url: https://github.com/dariyooo/dalang.git
+      path: dart_packages/ml_inference
+      ref: refactor-v4
+  ml_inference_router:
+    git:
+      url: https://github.com/dariyooo/dalang.git
+      path: dart_packages/ml_inference_router
+      ref: refactor-v4
+  unidic_tags:
+    git:
+      url: https://github.com/dariyooo/dalang.git
+      path: dart_packages/unidic_tags
       ref: refactor-v4
 
 dev_dependencies:
