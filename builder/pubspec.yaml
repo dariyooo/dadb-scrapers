@@ -13,39 +13,18 @@ dependencies:
       path: dart_packages/language_processing
       ref: refactor-v4
 
+# Mirrors the workspace-wide override da_db declares in dalang: tongrams_dart
+# still constrains code_assets ^1.2.0 while sqlite_extensions needs ^2.0.0.
+dependency_overrides:
+  hooks: ^2.2.0
+  code_assets: ^2.0.0
+
 # The builder never calls the sqlite-extension-backed APIs; skip their
 # prebuilt binaries, which are only fetchable inside the dalang workspace.
 hooks:
   user_defines:
     sqlite_extensions:
       allow_missing_binaries: true
-
-# language_processing declares its workspace-sibling packages by bare name,
-# which pub cannot resolve outside the dalang monorepo; point them at git.
-dependency_overrides:
-  # dalang's workspace settles these through da_db's overrides; mirror them.
-  code_assets: ^2.0.0
-  hooks: ^2.2.0
-  sqlite_extensions:
-    git:
-      url: https://github.com/dariyooo/dalang.git
-      path: dart_packages/sqlite_extensions
-      ref: refactor-v4
-  ml_inference:
-    git:
-      url: https://github.com/dariyooo/dalang.git
-      path: dart_packages/ml_inference
-      ref: refactor-v4
-  ml_inference_router:
-    git:
-      url: https://github.com/dariyooo/dalang.git
-      path: dart_packages/ml_inference_router
-      ref: refactor-v4
-  unidic_tags:
-    git:
-      url: https://github.com/dariyooo/dalang.git
-      path: dart_packages/unidic_tags
-      ref: refactor-v4
 
 dev_dependencies:
   test: ^1.25.0
