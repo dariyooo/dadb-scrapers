@@ -23,12 +23,14 @@ int buildBankZip({
   required Directory outDir,
   String? author,
   String? languageProcessingRef,
+  String? passLabel,
   int chunkSize = sentencesPerBankFile,
 }) {
   final tag = '$site-$workId';
   final index = {
     'title': 'corpus-$tag',
-    'revision': '$builderVersion+lp.${languageProcessingRef ?? 'local'}',
+    'revision':
+        '${passLabel == null ? '' : '$passLabel+'}$builderVersion+lp.${languageProcessingRef ?? 'local'}',
     'format': 3,
     'sequenced': true,
     'author': author,

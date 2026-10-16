@@ -20,6 +20,7 @@ void main() {
       outDir: tmp,
       author: '作者名',
       languageProcessingRef: 'abc123',
+      passLabel: '2026-10',
       chunkSize: 2,
     );
     expect(count, 5);
@@ -42,7 +43,7 @@ void main() {
     expect(index['title'], 'corpus-syosetu-n0000aa');
     expect(index['format'], 3);
     expect(index['sourceLanguage'], 'jpn');
-    expect(index['revision'], contains('abc123'));
+    expect(index['revision'], '2026-10+0.1.0+lp.abc123');
 
     final bank1 = readJson('example_bank_1.json') as List;
     expect(bank1, hasLength(2));

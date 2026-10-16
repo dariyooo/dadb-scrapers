@@ -155,9 +155,11 @@ jobs:
             echo "nothing to build"
             exit 0
           fi
+          label=$(uv run python -c "from pathlib import Path; from core.summary import pass_label; print(pass_label(Path('sources/${{ matrix.site }}/state/pass.json')))")
           cd builder
           dart run bin/build_bank.dart ../out/text/${{ matrix.site }} \
-            ../out/banks/${{ matrix.site }} --site=${{ matrix.site }}
+            ../out/banks/${{ matrix.site }} --site=${{ matrix.site }} \
+            --pass-label="$label"
 
       # Each shard only writes its own cursor-N.json, so a rebase against
       # the other shards' commits is always clean.

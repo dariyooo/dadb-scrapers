@@ -20,6 +20,10 @@ void main(List<String> args) {
           .map((a) => a.substring('--site='.length))
           .firstOrNull ??
       'syosetu';
+  final passLabel = args
+      .where((a) => a.startsWith('--pass-label='))
+      .map((a) => a.substring('--pass-label='.length))
+      .firstOrNull;
 
   final processor = JapaneseProcessor();
   final lpRef = _resolvedLanguageProcessingRef();
@@ -43,6 +47,7 @@ void main(List<String> args) {
       sentences: sentences,
       outDir: outDir,
       languageProcessingRef: lpRef,
+      passLabel: passLabel,
     );
     final zipBytes =
         File('${outDir.path}/corpus-$site-$workId.zip').readAsBytesSync();
@@ -54,7 +59,8 @@ void main(List<String> args) {
       'sentences': count,
       'bytes': zipBytes.length,
       'sha256': sha256.convert(zipBytes).toString(),
-      'revision': '$builderVersion+lp.${lpRef ?? 'local'}',
+      'revision':
+          '${passLabel == null ? '' : '$passLabel+'}$builderVersion+lp.${lpRef ?? 'local'}',
     });
     stdout.writeln('corpus-$site-$workId.zip: $count sentences');
   }
