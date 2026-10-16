@@ -60,7 +60,7 @@ packages:
   character_classifier:
     dependency: transitive
     description:
-      path: "../../../DaKanjiApplication_4/dart_packages/character_classifier"
+      path: "../../../DaKanjiApplication_4/dart_packages/ml/task_implementations/character_classifier"
       relative: true
     source: path
     version: "0.0.1"
@@ -128,6 +128,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.7"
+  embeddings:
+    dependency: transitive
+    description:
+      path: "../../../DaKanjiApplication_4/dart_packages/ml/task_implementations/embeddings"
+      relative: true
+    source: path
+    version: "0.0.1"
   ffi:
     dependency: transitive
     description:
@@ -219,7 +226,7 @@ packages:
   japanese_quality_scorer:
     dependency: transitive
     description:
-      path: "../../../DaKanjiApplication_4/dart_packages/japanese_quality_scorer"
+      path: "../../../DaKanjiApplication_4/dart_packages/ml/task_implementations/japanese_quality_scorer"
       relative: true
     source: path
     version: "0.0.1"
@@ -236,6 +243,13 @@ packages:
     description:
       path: "/Users/darioklepoch/dev/DaKanji/DaKanjiApplication_4/dart_packages/language_processing"
       relative: false
+    source: path
+    version: "1.0.0"
+  llama_server_dart:
+    dependency: transitive
+    description:
+      path: "../../../DaKanjiApplication_4/dart_packages/ml/engines/llama_server_dart"
+      relative: true
     source: path
     version: "1.0.0"
   logging:
@@ -265,7 +279,7 @@ packages:
   mecab_segmenter:
     dependency: transitive
     description:
-      path: "../../../DaKanjiApplication_4/dart_packages/mecab_segmenter"
+      path: "../../../DaKanjiApplication_4/dart_packages/ml/task_implementations/mecab_segmenter"
       relative: true
     source: path
     version: "0.0.1"
@@ -288,24 +302,32 @@ packages:
   ml_inference:
     dependency: transitive
     description:
-      path: "../../../DaKanjiApplication_4/dart_packages/ml_inference"
+      path: "../../../DaKanjiApplication_4/dart_packages/ml/ml_inference"
       relative: true
     source: path
     version: "0.0.1"
   ml_inference_router:
     dependency: transitive
     description:
-      path: "../../../DaKanjiApplication_4/dart_packages/ml_inference_router"
+      path: "../../../DaKanjiApplication_4/dart_packages/ml/ml_inference_router"
       relative: true
     source: path
     version: "0.0.1"
   ml_utils:
     dependency: transitive
     description:
-      path: "../../../DaKanjiApplication_4/dart_packages/ml_utils"
+      path: "../../../DaKanjiApplication_4/dart_packages/ml/ml_utils"
       relative: true
     source: path
     version: "0.0.1"
+  native_assets_cli:
+    dependency: transitive
+    description:
+      name: native_assets_cli
+      sha256: "224d3d7eb3fd05ed631a2a19986a2189c009ccda7747f5192096998200d45bfe"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.18.0"
   native_toolchain_c:
     dependency: transitive
     description:
@@ -317,7 +339,7 @@ packages:
   ngram_scorer:
     dependency: transitive
     description:
-      path: "../../../DaKanjiApplication_4/dart_packages/ngram_scorer"
+      path: "../../../DaKanjiApplication_4/dart_packages/ml/task_implementations/ngram_scorer"
       relative: true
     source: path
     version: "0.0.1"
@@ -404,10 +426,17 @@ packages:
   relation_scorer:
     dependency: transitive
     description:
-      path: "../../../DaKanjiApplication_4/dart_packages/relation_scorer"
+      path: "../../../DaKanjiApplication_4/dart_packages/ml/task_implementations/relation_scorer"
       relative: true
     source: path
     version: "0.0.1"
+  shared_utils:
+    dependency: transitive
+    description:
+      path: "../../../DaKanjiApplication_4/dart_packages/shared_utils"
+      relative: true
+    source: path
+    version: "1.0.0"
   shelf:
     dependency: transitive
     description:
@@ -538,7 +567,7 @@ packages:
   tongrams_dart:
     dependency: transitive
     description:
-      path: "../../../DaKanjiApplication_4/dart_packages/tongrams_dart"
+      path: "../../../DaKanjiApplication_4/dart_packages/ml/engines/tongrams_dart"
       relative: true
     source: path
     version: "0.1.0"
