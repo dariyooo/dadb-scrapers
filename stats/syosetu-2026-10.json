@@ -1,11 +1,11 @@
 {
  "pass": "2026-10",
  "totals": {
-  "bytes": 357529366,
-  "sentences": 9161675,
+  "bytes": 358364385,
+  "sentences": 9181876,
   "works": 284
  },
- "updated": "2026-10-11T10:32:40+00:00",
+ "updated": "2026-10-16T02:15:37+00:00",
  "works": {
   "n0020by": {
    "bytes": 99775,
@@ -1702,14 +1702,14 @@
    "url": "https://ncode.syosetu.com/n5529cy/"
   },
   "n5542gs": {
-   "bytes": 868423,
-   "chapters": 354,
+   "bytes": 1204090,
+   "chapters": 401,
    "id": "n5542gs",
-   "revision": "0.1.0+lp.063b566fe55c",
-   "sentences": 25984,
-   "sha256": "8248bb8c1d1a74a2d90ef30b662a557313af418b867bae34e92f7ba9aa9798e2",
+   "revision": "0.1.0+lp.2f30432b3d5d",
+   "sentences": 36066,
+   "sha256": "b3e1c98cd117946b69bbcda6ddc6debb9cf463ed5d0fb7e02a391b3bbadbde69",
    "title": "【アニメ1月放送】ゲーム世界転生〈ダン活〉～ゲーマーは【ダンジョン就活のススメ】を 〈はじめから〉プレイする～",
-   "updated": "2026-10-11T10:32:40+00:00",
+   "updated": "2026-10-16T02:15:37+00:00",
    "url": "https://ncode.syosetu.com/n5542gs/"
   },
   "n5577es": {
@@ -2142,14 +2142,14 @@
    "url": "https://ncode.syosetu.com/n7031bs/"
   },
   "n7056hm": {
-   "bytes": 388235,
-   "chapters": 144,
+   "bytes": 874253,
+   "chapters": 401,
    "id": "n7056hm",
-   "revision": "0.1.0+lp.063b566fe55c",
-   "sentences": 11005,
-   "sha256": "33a0d431651e9b6fc780fe2be3a958e3f2b319c04c2f4e4f3877690778fd9e9b",
+   "revision": "0.1.0+lp.2f30432b3d5d",
+   "sentences": 21639,
+   "sha256": "1c170cbb21c1c64f91949c9cc9b1c4ccf41da018db17387643c2e4b7ffec7867",
    "title": "【WEB版】やり込んだ乙女ゲームの悪役モブですが、断罪は嫌なので真っ当に生きます【書籍＆コミカライズ大好評発売中】",
-   "updated": "2026-10-11T10:32:40+00:00",
+   "updated": "2026-10-16T02:15:37+00:00",
    "url": "https://ncode.syosetu.com/n7056hm/"
   },
   "n7094fo": {
@@ -2703,14 +2703,14 @@
    "url": "https://ncode.syosetu.com/n8611bv/"
   },
   "n8618ef": {
-   "bytes": 420561,
-   "chapters": 80,
+   "bytes": 433895,
+   "chapters": 86,
    "id": "n8618ef",
-   "revision": "0.1.0+lp.063b566fe55c",
-   "sentences": 14513,
-   "sha256": "48d160d295f5496f0b9ee3afcbd6fef759a473ad516009c855b1cbb719f7b5c8",
+   "revision": "0.1.0+lp.2f30432b3d5d",
+   "sentences": 13998,
+   "sha256": "630656c49a6fa977fdb96620df9997546b6ddbc08701a20ee73850f20e2db81d",
    "title": "冒険家になろう！　スキルボードでダンジョン攻略(WEB版)",
-   "updated": "2026-10-11T10:32:40+00:00",
+   "updated": "2026-10-16T02:15:37+00:00",
    "url": "https://ncode.syosetu.com/n8618ef/"
   },
   "n8672gi": {
